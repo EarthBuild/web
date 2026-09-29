@@ -1,0 +1,76 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    'helpers:pinGitHubActionDigests',
+    'security:openssf-scorecard',
+    ':semanticCommits',
+  ],
+  configMigration: true,
+  prHourlyLimit: 0,
+  prConcurrentLimit: 2,
+  labels: [
+    'renovate',
+  ],
+  'github-actions': {
+    enabled: true,
+  },
+  dockerfile: {
+    enabled: true,
+    fileMatch: [
+      '/(^|/)Earthfile$/',
+      '/.*\\.earth$/',
+    ],
+  },
+  packageRules: [
+    {
+      description: 'Group GitHub Actions updates monthly',
+      matchManagers: ['github-actions'],
+      groupName: 'github-actions',
+      schedule: ['every month'],
+    },
+    {
+      description: 'Update EarthBuild release immediately',
+      matchPackageNames: ['EarthBuild/earthbuild'],
+      matchDatasources: ['github-releases'],
+      schedule: ['at any time'],
+    },
+    {
+      description: 'Security vulnerability updates bypass scheduling',
+      matchCategories: ['security'],
+      schedule: ['at any time'],
+    },
+  ],
+  customManagers: [
+    {
+      customType: 'regex',
+      description: 'Update GitHub Actions runner versions',
+      fileMatch: ['/(^|/)\\.github/workflows/.+\\.ya?ml$/'],
+      matchStrings: [
+        '(?:runs-on|RUNS_ON):\\s*[\'"]?(?<depName>ubuntu|macos|windows)-(?<currentValue>[^\'"\\s#]+)[\'"]?',
+      ],
+      datasourceTemplate: 'github-runners',
+    },
+    {
+      customType: 'regex',
+      description: 'Update EarthBuild latest version in hugo.toml',
+      fileMatch: ['/^hugo\\.toml$/'],
+      matchStrings: [
+        'latestVersion\\s*=\\s*["\'](?<currentValue>v[0-9]+\\.[0-9]+\\.[0-9]+)["\']',
+      ],
+      depNameTemplate: 'EarthBuild/earthbuild',
+      datasourceTemplate: 'github-releases',
+    },
+    {
+      customType: 'regex',
+      description: 'Update Three.js CDN version in digital-earth.ts',
+      fileMatch: ['/^assets/ts/digital-earth\\.ts$/'],
+      matchStrings: [
+        'cdnjs\\.cloudflare\\.com/ajax/libs/three\\.js/r(?<currentValue>\\d+)/three\\.min\\.js',
+      ],
+      depNameTemplate: 'three',
+      datasourceTemplate: 'npm',
+      extractVersionTemplate: '^0\\.(?<version>\\d+)\\.',
+    },
+  ],
+}

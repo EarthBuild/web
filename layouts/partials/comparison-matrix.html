@@ -1,0 +1,128 @@
+<section class="section" id="comparison">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">How EarthBuild</span> <span class="hero-accent-shimmer text-gradient">Compares to Alternatives</span></h2>
+      <p class="section-subtitle">
+        See why engineering teams choose EarthBuild over Dagger, Bazel, Docker Buildx, Makefiles, and brittle CI YAML.
+      </p>
+    </div>
+
+    <div class="matrix-container">
+      <!-- Filter Tabs -->
+      <div class="matrix-filters">
+        <button class="matrix-filter-btn active" data-filter="all">All Features</button>
+        <button class="matrix-filter-btn" data-filter="syntax">Simplicity & Syntax</button>
+        <button class="matrix-filter-btn" data-filter="performance">Parallelism & Caching</button>
+        <button class="matrix-filter-btn" data-filter="isolation">Sandboxing & Parity</button>
+        <button class="matrix-filter-btn" data-filter="governance">Open Source & Licensing</button>
+      </div>
+
+      <!-- Table View -->
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="min-width: 240px;">Capability</th>
+              <th class="col-earthbuild" style="min-width: 170px;">EarthBuild</th>
+              <th style="min-width: 140px;">Dagger</th>
+              <th style="min-width: 140px;">Bazel</th>
+              <th style="min-width: 140px;">Docker Buildx</th>
+              <th style="min-width: 130px;">Make / Just</th>
+              <th style="min-width: 140px;">GitHub Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Parity & Isolation -->
+            <tr data-category="isolation">
+              <td><strong>Local == CI 100% Parity</strong><br><small style="color: var(--text-muted);">Exact same build outputs locally & in CI</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Native</span></td>
+              <td><span class="status-yes">✓ Native</span></td>
+              <td><span class="status-yes">✓ Native</span></td>
+              <td><span class="status-partial">◐ Image only</span></td>
+              <td><span class="status-no">✕ Host dependent</span></td>
+              <td><span class="status-no">✕ Cloud only</span></td>
+            </tr>
+            <tr data-category="isolation">
+              <td><strong>Automatic Container Sandboxing</strong><br><small style="color: var(--text-muted);">Zero toolchain drift across laptops</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Yes (Built-in)</span></td>
+              <td><span class="status-yes">✓ Yes (Containers)</span></td>
+              <td><span class="status-partial">◐ Strict sandbox</span></td>
+              <td><span class="status-yes">✓ Yes</span></td>
+              <td><span class="status-no">✕ None</span></td>
+              <td><span class="status-partial">◐ VM-level</span></td>
+            </tr>
+
+            <!-- Simplicity & Syntax -->
+            <tr data-category="syntax">
+              <td><strong>Familiar Declarative Syntax</strong><br><small style="color: var(--text-muted);">Familiar Dockerfile & Make verbs</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Declarative DSL</span></td>
+              <td><span class="status-partial">◐ Code SDKs (Go/TS/Python)</span></td>
+              <td><span class="status-partial">◐ Starlark DSL</span></td>
+              <td><span class="status-yes">✓ Dockerfile</span></td>
+              <td><span class="status-yes">✓ Makefile</span></td>
+              <td><span class="status-partial">◐ CI YAML</span></td>
+            </tr>
+            <tr data-category="syntax">
+              <td><strong>Zero-Rewrite Adoption</strong><br><small style="color: var(--text-muted);">Wrap existing tools (cargo, go, npm, pip)</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Drop-in Wrapper</span></td>
+              <td><span class="status-partial">◐ Requires SDK code</span></td>
+              <td><span class="status-no">✕ Total rewrite</span></td>
+              <td><span class="status-yes">✓ Drop-in</span></td>
+              <td><span class="status-yes">✓ Drop-in</span></td>
+              <td><span class="status-yes">✓ Drop-in</span></td>
+            </tr>
+            <tr data-category="syntax">
+              <td><strong>Local Artifact Export to Host</strong><br><small style="color: var(--text-muted);">Native SAVE ARTIFACT ... AS LOCAL</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Native (1-line)</span></td>
+              <td><span class="status-yes">✓ Via Directory API</span></td>
+              <td><span class="status-yes">✓ Native</span></td>
+              <td><span class="status-partial">◐ Requires --output flag</span></td>
+              <td><span class="status-yes">✓ Host writes</span></td>
+              <td><span class="status-no">✕ Upload artifact</span></td>
+            </tr>
+
+            <!-- Performance & Caching -->
+            <tr data-category="performance">
+              <td><strong>Automatic DAG Parallelism</strong><br><small style="color: var(--text-muted);">Build independent targets simultaneously</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Automatic (BuildKit)</span></td>
+              <td><span class="status-yes">✓ Automatic</span></td>
+              <td><span class="status-yes">✓ Automatic</span></td>
+              <td><span class="status-partial">◐ Multi-stage only</span></td>
+              <td><span class="status-partial">◐ make -j (Unsandboxed)</span></td>
+              <td><span class="status-partial">◐ Matrix jobs</span></td>
+            </tr>
+            <tr data-category="performance">
+              <td><strong>Multi-Tier Layer Caching</strong><br><small style="color: var(--text-muted);">Local layer cache + remote registry cache</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ Instant Layer Cache</span></td>
+              <td><span class="status-yes">✓ Layer Cache</span></td>
+              <td><span class="status-yes">✓ Content-addressed</span></td>
+              <td><span class="status-yes">✓ BuildKit cache</span></td>
+              <td><span class="status-no">✕ Timestamp based</span></td>
+              <td><span class="status-partial">◐ actions/cache</span></td>
+            </tr>
+            <tr data-category="performance">
+              <td><strong>Monorepo & Cross-Repo Imports</strong><br><small style="color: var(--text-muted);">Reference targets across folders or git URLs</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ First-class</span></td>
+              <td><span class="status-yes">✓ Module imports</span></td>
+              <td><span class="status-yes">✓ Monorepo only</span></td>
+              <td><span class="status-no">✕ Single file only</span></td>
+              <td><span class="status-partial">◐ include directives</span></td>
+              <td><span class="status-no">✕ Submodules</span></td>
+            </tr>
+
+            <!-- Governance -->
+            <tr data-category="governance">
+              <td><strong>100% Community Open Source (MPL-2.0)</strong><br><small style="color: var(--text-muted);">No proprietary locks, fully self-hostable</small></td>
+              <td class="col-earthbuild"><span class="status-yes">✓ 100% Open Source</span></td>
+              <td><span class="status-partial">◐ Apache 2.0 + Cloud service</span></td>
+              <td><span class="status-yes">✓ Open source</span></td>
+              <td><span class="status-partial">◐ Apache 2.0 (Buildx) / Desktop terms</span></td>
+              <td><span class="status-yes">✓ Open source</span></td>
+              <td><span class="status-no">✕ Proprietary SaaS</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

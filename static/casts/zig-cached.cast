@@ -1,0 +1,11 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.35, "o", "   \u001b[36m+deps\u001b[0m  | \u001b[32m*cached*\u001b[0m --> FROM alpine:3.24.1 (Zig 0.16.0 toolchain)\r\n"]
+[0.45, "o", "   \u001b[36m+src\u001b[0m   | \u001b[32m*cached*\u001b[0m --> COPY build.zig src/ ./\r\n"]
+[0.55, "o", "  \u001b[36m+build\u001b[0m  | \u001b[32m*cached*\u001b[0m --> RUN --mount=type=cache,target=/root/.cache/zig zig build -Doptimize=ReleaseFast\r\n"]
+[0.70, "o", "  \u001b[36m+build\u001b[0m  | zig cache: \u001b[32m100% cache hits\u001b[0m (all AST units up-to-date)\r\n"]
+[0.85, "o", "  \u001b[36m+build\u001b[0m  | \u001b[32m*cached*\u001b[0m --> SAVE ARTIFACT zig-out/bin/fizzbuzz AS LOCAL ./bin/fizzbuzz\r\n"]
+[1.05, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [0.8s] ===========================\u001b[0m\r\n"]
+[1.10, "o", "\u001b[90mOutput saved: ./bin/fizzbuzz (1.8 MB static binary)\u001b[0m\r\n"]

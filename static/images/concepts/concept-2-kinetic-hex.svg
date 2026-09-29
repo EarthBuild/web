@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="c2-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="c2-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="c2-mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(256, 256) scale(0.95) translate(-256, -256)">
+    <!-- Top-Left Facet (Cyan) -->
+    <path d="M 236,76 L 380,76 L 286,238 L 142,238 Z" fill="url(#c2-cyan)"/>
+    <!-- Center-Right Facet (Emerald) - Strong forward projection -->
+    <path d="M 306,120 L 450,256 L 356,418 L 212,282 Z" fill="url(#c2-emerald)"/>
+    <!-- Bottom-Left Facet (Mint) -->
+    <path d="M 122,274 L 266,274 L 172,436 L 62,436 Z" fill="url(#c2-mint)"/>
+  </g>
+</svg>

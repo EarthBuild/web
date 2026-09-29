@@ -1,0 +1,100 @@
+<section class="section" id="problem-solution">
+  <!-- Contrast Scrim (Optical text shield between Earth and foreground copy, matching hero) -->
+  <div class="problem-solution-scrim" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">Overcome the</span> <span class="hero-accent-shimmer text-gradient">CI Feedback Bottleneck</span></h2>
+      <p class="section-subtitle">
+        Software engineers lose hours every week waiting for cloud CI runners and dealing with environment drift. EarthBuild gives you the speed and certainty of local iteration.
+      </p>
+    </div>
+
+    <div class="problem-solution-grid">
+      <!-- Problem Panel -->
+      <div class="comparison-panel panel-problem">
+        <h3 class="panel-badge badge-bad">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <span>Traditional CI & Build Friction</span>
+        </h3>
+
+        <ul class="comparison-list">
+          <li class="comparison-item">
+            <div class="item-icon icon-bad">✕</div>
+            <div class="item-content">
+              <h4>"Works on my machine" Syndrome</h4>
+              <p>Mismatched Node, Python, or Go versions, missing local headers, and OS differences create constant environment drift.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-bad">✕</div>
+            <div class="item-content">
+              <h4>Remote CI Guess-and-Check Loops</h4>
+              <p>You cannot easily reproduce remote CI pipelines locally. Every adjustment requires pushing commits and waiting in runner queues.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-bad">✕</div>
+            <div class="item-content">
+              <h4>Untestable Pipeline Scripts in YAML</h4>
+              <p>Multi-step YAML files with embedded shell scripts that cannot be tested, stepped through, or executed directly on local machines.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-bad">✕</div>
+            <div class="item-content">
+              <h4>Redundant Rebuilds & Expensive Cloud Compute</h4>
+              <p>CI runners re-download dependencies, re-compile static assets, and rerun unchanged test suites from scratch on every push.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Solution Panel -->
+      <div class="comparison-panel panel-solution">
+        <h3 class="panel-badge badge-good">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span>The EarthBuild Paradigm</span>
+        </h3>
+
+        <ul class="comparison-list">
+          <li class="comparison-item">
+            <div class="item-icon icon-good">✓</div>
+            <div class="item-content">
+              <h4>Deterministic Container Sandboxing</h4>
+              <p>Every step runs inside an isolated container with declared inputs. If it builds on your workstation, it builds in CI identically.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-good">✓</div>
+            <div class="item-content">
+              <h4>Instant Local CI Parity</h4>
+              <p>Run <code>earth +test</code> or <code>earth +ci</code> directly in your terminal. Get instant local feedback in seconds without pushing a single commit.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-good">✓</div>
+            <div class="item-content">
+              <h4>Familiar, Declarative Syntax</h4>
+              <p>Instant readability with Dockerfile verbs (<code>FROM</code>, <code>RUN</code>, <code>COPY</code>) and Makefile targets (<code>+build</code>, <code>+docker</code>). Zero complex DSLs.</p>
+            </div>
+          </li>
+          <li class="comparison-item">
+            <div class="item-icon icon-good">✓</div>
+            <div class="item-content">
+              <h4>Automatic Parallelism & Instant Caching</h4>
+              <p>EarthBuild automatically discovers target dependencies, executes independent steps simultaneously, and caches layers instantly.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

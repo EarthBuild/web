@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EarthBuild Favicon" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="ebGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="80" fill="#0B1120"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="url(#ebGrad)" stroke-width="8" filter="url(#glow)"/>
+  <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+    <path d="m200 100 58 35-58 35-58-35z"/>
+    <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Left Half: Clean Earth Globe -->
+  <path d="M 100 20 A 80 80 0 0 0 100 180 Z" fill="#0EA5E9"/>
+  
+  <!-- Right Half: Digital Container Matrix (3 bold isometric blocks) -->
+  <g stroke-linecap="round" stroke-linejoin="round" stroke-width="9">
+    <!-- Top Cube Edge (Cyan) -->
+    <path d="M 106 40 L 145 62 L 145 100 L 106 78 Z" stroke="#38BDF8" fill="rgba(56, 189, 248, 0.15)"/>
+    <!-- Bottom Cube Edge (Emerald) -->
+    <path d="M 106 122 L 145 100 L 145 138 L 106 160 Z" stroke="#10B981" fill="rgba(16, 185, 129, 0.15)"/>
+    <!-- Outer Forward Node (Mint) -->
+    <path d="M 145 100 L 178 100" stroke="#34D399"/>
+    <circle cx="178" cy="100" r="8" fill="#34D399" stroke="none"/>
+  </g>
+</svg>
