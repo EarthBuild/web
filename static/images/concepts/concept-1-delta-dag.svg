@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="c1-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="c1-mint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="c1-emerald" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(10, 0)">
+    <!-- Upper Stream Facet (Cyan) -->
+    <path d="M 80,105 L 305,235 L 235,235 L 70,140 Z" fill="url(#c1-cyan)"/>
+    <!-- Lower Stream Facet (Mint) -->
+    <path d="M 70,372 L 235,277 L 305,277 L 80,407 Z" fill="url(#c1-mint)"/>
+    <!-- Central Forward Arrow / Output Core (Emerald) -->
+    <path d="M 180,256 L 310,180 L 440,256 L 310,332 Z" fill="url(#c1-emerald)"/>
+    <!-- Forward Velocity Piercer -->
+    <polygon points="360,256 410,226 440,256 410,286" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<section class="section" id="calculator" style="background: radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">Calculate Your</span> <span class="hero-accent-shimmer text-gradient">Time, Compute & CO₂ Savings</span></h2>
+      <p class="section-subtitle">
+        See how much developer focus, CI runner capacity, and data center energy your team saves by eliminating redundant rebuilds.
+      </p>
+    </div>
+
+    <div class="roi-card">
+      <!-- Sliders Side -->
+      <div class="roi-controls">
+        <div class="slider-group">
+          <label for="roiTeamSize" class="slider-label">
+            <span>Team Size (Engineers)</span>
+            <span class="slider-val" id="roiTeamSizeVal">20 devs</span>
+          </label>
+          <input type="range" id="roiTeamSize" aria-label="Team Size in Engineers" min="1" max="100" value="20" step="1">
+        </div>
+
+        <div class="slider-group">
+          <label for="roiBuildsPerDay" class="slider-label">
+            <span>Builds per Engineer / Day</span>
+            <span class="slider-val" id="roiBuildsPerDayVal">8 builds/day</span>
+          </label>
+          <input type="range" id="roiBuildsPerDay" aria-label="Builds per Engineer per Day" min="1" max="25" value="8" step="1">
+        </div>
+
+        <div class="slider-group">
+          <label for="roiMinutesSaved" class="slider-label">
+            <span>Time Saved per Build (Layer Cache + Local Repro)</span>
+            <span class="slider-val" id="roiMinutesSavedVal">12 mins</span>
+          </label>
+          <input type="range" id="roiMinutesSaved" aria-label="Time Saved per Build in Minutes" min="2" max="30" value="12" step="1">
+        </div>
+      </div>
+
+      <!-- Results Side -->
+      <div class="roi-results-box">
+        <div class="roi-metric">
+          <div class="roi-number" style="color: #FBBF24; text-shadow: 0 0 20px rgba(251, 191, 36, 0.25);" id="roiHoursSaved">672 hrs</div>
+          <div class="roi-desc">⚡ Engineering Wait Time Reclaimed / Month</div>
+          <div class="roi-subtext roi-subtext-amber" id="roiHoursPerDev">≈ ~34 hrs saved / dev / month</div>
+        </div>
+
+        <div class="roi-metric">
+          <div class="roi-number" style="color: #38BDF8;" id="roiRunnerMinutesSaved">40,320 mins</div>
+          <div class="roi-desc">🖥️ CI Runner Minutes Spared / Month</div>
+          <div class="roi-subtext roi-subtext-cyan" id="roiVcpuHours">≈ 1,344 vCPU-hrs (2-vCPU runner baseline)</div>
+        </div>
+
+        <div class="roi-metric" style="margin-bottom: 0;">
+          <div class="roi-number" style="color: #34D399;" id="roiCo2Saved">605 kg CO₂e</div>
+          <div class="roi-desc">🌱 Cloud Emissions Avoided / Month</div>
+          <div class="roi-subtext" id="roiCo2Equivalent">≈ ~1.2 MWh data center energy spared</div>
+        </div>
+
+        <div class="roi-actions">
+          <button type="button" class="btn btn-secondary roi-action-btn roi-copy-share-btn" id="roiCopyShareBtn" aria-label="Share Calculations: copy custom link with current numbers">
+            <svg class="roi-btn-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+            <svg class="roi-btn-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span class="roi-copy-btn-text">Share Calculations</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

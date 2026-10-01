@@ -1,0 +1,12 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.35, "o", "   \u001b[36m+base\u001b[0m   | \u001b[32m*cached*\u001b[0m --> FROM alpine:3.19 (gcc, cmake, ninja, ccache)\r\n"]
+[0.45, "o", "   \u001b[36m+src\u001b[0m    | \u001b[32m*cached*\u001b[0m --> COPY CMakeLists.txt src/ ./\r\n"]
+[0.55, "o", "  \u001b[36m+cmake\u001b[0m   | \u001b[32m*cached*\u001b[0m --> RUN cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release\r\n"]
+[0.70, "o", "  \u001b[36m+build\u001b[0m   | \u001b[32m*cached*\u001b[0m --> RUN --mount=type=cache,target=/root/.ccache ninja -C build\r\n"]
+[0.85, "o", "  \u001b[36m+build\u001b[0m   | ccache hit rate: \u001b[32m100.0%\u001b[0m (38/38 targets)\r\n"]
+[0.95, "o", "  \u001b[36m+build\u001b[0m   | \u001b[32m*cached*\u001b[0m --> SAVE ARTIFACT build/my-app AS LOCAL ./bin/my-app\r\n"]
+[1.20, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [1.2s] ===========================\u001b[0m\r\n"]
+[1.25, "o", "\u001b[90mOutput saved: ./bin/my-app (8.4 MB) • 25.3x Speedup\u001b[0m\r\n"]

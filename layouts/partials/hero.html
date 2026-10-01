@@ -1,0 +1,52 @@
+<section class="hero-section">
+  <!-- 3D Voxel Earth Backdrop -->
+  <div class="hero-earth-backdrop" id="heroEarthBackdrop">
+    <canvas id="digitalEarthCanvas" class="digital-earth-canvas" aria-hidden="true"></canvas>
+  </div>
+
+  <!-- Hero Contrast Scrim (Optical text shield between Earth and foreground copy) -->
+  <div class="hero-earth-scrim" aria-hidden="true"></div>
+
+  <div class="container hero-container-content">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>Free Forever</span>
+          <span class="hero-badge-separator">•</span>
+          <span>Mozilla Public License 2.0</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-text-shimmer">Build Once. Run Anywhere.</span><br>
+        <span class="hero-accent-shimmer">Seriously.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Run <strong class="hero-highlight-emerald">fast, containerized builds</strong> that behave identically everywhere. No more broken pipelines, no more &ldquo;works on my machine&rdquo;.
+      </p>
+
+
+      <!-- Quick Install Box -->
+      <div class="install-widget">
+        <div class="install-tabs">
+          <button class="install-tab-btn active" data-install-type="brew">Homebrew</button>
+          <button class="install-tab-btn" data-install-type="curl">cURL / Shell</button>
+          <button class="install-tab-btn" data-install-type="windows">Windows (WSL 2)</button>
+          <button class="install-tab-btn" data-install-type="nix">Nix</button>
+        </div>
+        <div class="install-code-box">
+          <span class="install-code-text" id="installCodeSnippet">brew install earthbuild/tap/earth</span>
+          <button class="copy-btn" id="heroCopyBtn" data-clipboard-target="installCodeSnippet" aria-label="Copy install command">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

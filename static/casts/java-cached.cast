@@ -1,0 +1,10 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +docker\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.35, "o", "   \u001b[36m+deps\u001b[0m  | \u001b[32m*cached*\u001b[0m --> FROM amazoncorretto:25.0.4 (Gradle 8.7 + OpenJDK 21)\r\n"]
+[0.45, "o", "  \u001b[36m+build\u001b[0m  | \u001b[32m*cached*\u001b[0m --> RUN gradle build && gradle install\r\n"]
+[0.55, "o", "  \u001b[36m+build\u001b[0m  | > Task :compileJava UP-TO-DATE\r\n"]
+[0.65, "o", "  \u001b[36m+build\u001b[0m  | > Task :installDist UP-TO-DATE\r\n"]
+[0.75, "o", " \u001b[36m+docker\u001b[0m  | \u001b[32m*cached*\u001b[0m --> SAVE IMAGE --push earthbuild/examples:java\r\n"]
+[0.90, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [0.9s] ===========================\u001b[0m\r\n"]

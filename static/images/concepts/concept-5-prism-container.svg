@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="p-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="p-mint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="p-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <!-- Symmetrical, ultra-crisp isometric container with negative space cuts -->
+  <g transform="translate(256, 256) scale(0.92) translate(-256, -256)">
+    <!-- Top Face (Electric Cyan) - Represents declared inputs & environment -->
+    <path d="M 256,60 L 400,144 L 256,228 L 112,144 Z" fill="url(#p-cyan)"/>
+    
+    <!-- Left Face (Mint) - Represents parallel multi-core task execution -->
+    <path d="M 100,166 L 244,250 L 244,418 L 100,334 Z" fill="url(#p-mint)"/>
+    
+    <!-- Right Face (Emerald) - Represents hermetic cached build output -->
+    <path d="M 268,250 L 412,166 L 412,334 L 268,418 Z" fill="url(#p-emerald)"/>
+  </g>
+</svg>

@@ -1,0 +1,554 @@
+<section class="section" id="migration">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">Adopt EarthBuild in</span> <span class="hero-accent-shimmer text-gradient">Under 5 Minutes</span></h2>
+      <p class="section-subtitle">
+        Adopt EarthBuild alongside your existing toolchain without disrupting active pipelines or rewriting your repository. Start with a single target and migrate at your own pace.
+      </p>
+    </div>
+
+    <!-- Sticky Language Selection List (Above the Migration Windows) -->
+    <div class="race-lang-navbar mig-lang-navbar" id="migLangNavbar">
+      <div class="race-lang-tabs" id="migLangTabs">
+        <button class="race-tab-btn" data-lang="python">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M11.9 2c-5.4 0-5.1 2.3-5.1 2.3l.01 2.4h5.2v.7H4.3S2 7.1 2 12.5c0 5.4 2 5.1 2 5.1h1.2v-1.7c0-1.9 1.7-1.9 1.7-1.9h5.1c1.6 0 1.6-1.6 1.6-1.6V7.4c0-1.6-1.6-1.6-1.6-1.6h-5.2V5.1c0-1.6 1.4-1.6 1.4-1.6h5.2c1.4 0 1.4-1.5 1.4-1.5H11.9zm-2.8 1.5a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z" fill="#387EB8"/>
+            <path d="M12.1 22c5.4 0 5.1-2.3 5.1-2.3l-.01-2.4h-5.2v-.7h7.7s2.3.3 2.3-5.1c0-5.4-2-5.1-2-5.1h-1.2v1.7c0 1.9-1.7 1.9-1.7 1.9h-5.1c-1.6 0-1.6 1.6-1.6 1.6v7c0 1.6 1.6 1.6 1.6 1.6h5.2v.7c0 1.6-1.4 1.6-1.4 1.6h-5.2c-1.4 0-1.4 1.5-1.4 1.5H12.1zm2.8-1.5a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z" fill="#FFE052"/>
+          </svg>
+          <span>Python</span>
+        </button>
+        <button class="race-tab-btn" data-lang="js">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7.7 18.2c.8 0 1.4-.3 1.8-.7.4-.5.6-1.1.6-2.1v-5.6h-1.8v5.6c0 .7-.3 1-1 1-.4 0-.8-.1-1.1-.3l-.5 1.5c.6.4 1.3.6 2 .6zm7.8-.1c1.5 0 2.5-.7 3-1.7l-1.5-.9c-.3.6-.8 1-1.5 1-.9 0-1.4-.5-1.4-1.1 0-.7.5-1 1.6-1.4 1.8-.6 2.8-1.4 2.8-2.8 0-1.6-1.2-2.7-3-2.7-1.3 0-2.3.5-2.9 1.5l1.4 1c.3-.5.8-.8 1.4-.8.7 0 1.2.4 1.2.9 0 .6-.5.9-1.5 1.3-1.8.7-2.9 1.4-2.9 2.9 0 1.8 1.4 2.8 3.3 2.8z" fill="#F7DF1E"/>
+          </svg>
+          <span>JavaScript</span>
+        </button>
+        <button class="race-tab-btn" data-lang="typescript">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M2.5 9.5h8v2.2H7.6V20H5.3v-8.3H2.5V9.5zm9.5 6.2c.7.6 1.7.9 2.7.9 1 0 1.6-.4 1.6-1 0-.6-.5-.9-1.8-1.3-2-.7-3.1-1.6-3.1-3.1 0-1.8 1.4-3.1 3.5-3.1 1.4 0 2.5.4 3.3 1.1l-1 1.8c-.6-.5-1.4-.8-2.3-.8-1 0-1.4.4-1.4.9 0 .5.4.8 1.7 1.2 2.2.7 3.2 1.6 3.2 3.2 0 1.9-1.4 3.2-3.7 3.2-1.6 0-2.9-.5-3.8-1.3l1.1-1.7z" fill="#3178C6"/>
+          </svg>
+          <span>TypeScript</span>
+        </button>
+        <button class="race-tab-btn" data-lang="java">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9.8 19.5c3.2.2 6.5-.2 9.2-1.3-1.1.8-3.4 1.4-5.6 1.5-2.8.1-5.6-.1-8.2-.8.8.4 2.8.6 4.6.6zm-1.2 2.1c2.4.2 5.1 0 7.3-.8-1.5.6-3.7.9-5.7.9-2.3 0-4.6-.2-6.8-.7.7.3 3.3.6 5.2.6zm6.8-5.3c1.7-.9 2.9-2.3 3.1-4.2.1-1.3-.4-2.6-1.3-3.5-.4-.4-.8-.7-1.3-.9.2.4.3.8.3 1.2 0 1.4-.9 2.7-2.1 3.2 1.2.9 1.4 2.4 1.3 4.2zm-4.3-13.6c.4 1.1-.3 2.1-.9 3-.7 1.1-1.4 2.2-1.6 3.5-.2 1.5.3 3 1.4 4 1 .9 2.4 1.4 3.7 1.6-.9-.7-1.6-1.7-1.6-2.9 0-1.5.9-2.8 1.9-3.9 1.1-1.2 2-2.5 1.7-4.1-.3-.6-.8-1.1-1.3-1.5-.7-.5-1.5-.8-2.3-.9-.4.4-.8.8-1 1.2z" fill="#E76F00"/>
+            <path d="M12.5 15.6c.9.2 1.8.3 2.7.2-.6-.5-1.4-.9-2.2-1.1-1.3-.3-2.6-.2-3.8.2.9.3 2.1.6 3.3.7zm-7.6 1.4c1.9.4 4 .6 6 .6 2.4 0 4.8-.3 7.1-.9-1.2.6-3.7 1.1-5.9 1.1-2.6 0-5.1-.3-7.2-.8z" fill="#5382A1"/>
+          </svg>
+          <span>Java</span>
+        </button>
+        <button class="race-tab-btn" data-lang="cpp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2L2.5 7.5v11L12 24l9.5-5.5v-11L12 2zm0 2.3l7.5 4.3v8.8L12 21.7l-7.5-4.3V8.6L12 4.3z" fill="#00599C"/>
+            <path d="M10.8 14.5c-.8.8-1.8 1.2-2.9 1.2-2.3 0-4-1.7-4-4s1.7-4 4-4c1.1 0 2.1.4 2.9 1.2l-1.2 1.3c-.5-.5-1.1-.8-1.7-.8-1.3 0-2.3 1-2.3 2.3s1 2.3 2.3 2.3c.6 0 1.2-.3 1.7-.8l1.2 1.3zm3.7-2.1h1.1v-1.1h1.1v1.1h1.1v1.1h-1.1v1.1h-1.1v-1.1h-1.1v-1.1zm4.4 0H20v-1.1h1.1v1.1h1.1v1.1h-1.1v1.1H20v-1.1h-1.1v-1.1z" fill="#659AD2"/>
+          </svg>
+          <span>C++</span>
+        </button>
+        <button class="race-tab-btn active" data-lang="go">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1.8 12.3c0-3.3 2.5-5.9 5.8-5.9 2.5 0 4.2 1.3 5 3.1l-2.4 1.3c-.5-1-1.4-1.7-2.6-1.7-1.8 0-3.1 1.4-3.1 3.2s1.3 3.2 3.1 3.2c1.4 0 2.3-.8 2.7-1.8H7.4v-2.4h5.6v5.8h-2.1v-1.4c-.8 1-2.1 1.7-3.5 1.7-3.3 0-5.6-2.6-5.6-6.1zm11.3 0c0-3.4 2.6-6 6.1-6s6.1 2.6 6.1 6-2.6 6-6.1 6-6.1-2.6-6.1-6zm9.5 0c0-2-1.4-3.5-3.4-3.5s-3.4 1.5-3.4 3.5 1.4 3.5 3.4 3.5 3.4-1.5 3.4-3.5z" fill="#00ACD7"/>
+          </svg>
+          <span>Go</span>
+        </button>
+        <button class="race-tab-btn" data-lang="rust">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#DEA584" aria-hidden="true">
+            <path d="M23.8 11.2c-.1-.4-.4-.6-.8-.7l-1.3-.2c-.1-.5-.3-.9-.6-1.4l.8-1.1c.3-.3.3-.8 0-1.1l-1.5-1.5c-.3-.3-.8-.3-1.1 0l-1.1.8c-.4-.3-.9-.5-1.4-.6l-.2-1.3c-.1-.4-.4-.7-.8-.8h-2.1c-.4.1-.7.4-.8.8l-.2 1.3c-.5.1-.9.3-1.4.6l-1.1-.8c-.3-.3-.8-.3-1.1 0L5.6 6.3c-.3.3-.3.8 0 1.1l.8 1.1c-.3.4-.5.9-.6 1.4l-1.3.2c-.4.1-.7.4-.8.8v2.1c.1.4.4.7.8.8l1.3.2c.1.5.3.9.6 1.4l-.8 1.1c-.3.3-.3.8 0 1.1l1.5 1.5c.3.3.8.3 1.1 0l1.1-.8c.4.3.9.5 1.4.6l.2 1.3c.1.4.4.7.8.8h2.1c.4-.1.7-.4.8-.8l.2-1.3c.5-.1.9-.3 1.4-.6l1.1.8c.3.3.8.3 1.1 0l1.5-1.5c.3-.3.3-.8 0-1.1l-.8-1.1c.3-.4.5-.9.6-1.4l1.3-.2c.4-.1.7-.4.8-.8v-2.1zM12 17c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm-1.8-8h2.3c1.2 0 1.9.6 1.9 1.5 0 .8-.5 1.3-1.3 1.4l1.6 2.1h-1.2l-1.4-1.9h-.8V14h-1.1V9zm1.1 2.2h1.1c.5 0 .9-.2.9-.6s-.4-.6-.9-.6h-1.1v1.2z"/>
+          </svg>
+          <span>Rust</span>
+        </button>
+        <button class="race-tab-btn" data-lang="zig">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#F7A41D" aria-hidden="true">
+            <path d="M1.5 4.5h5.5l4 7.5-4 7.5H1.5l4-7.5-4-7.5zm7.5 0h5.5l4 7.5-4 7.5H9l4-7.5-4-7.5zm7.5 0H22l-4 7.5 4 7.5h-5.5l4-7.5-4-7.5z"/>
+          </svg>
+          <span>Zig</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="migration-container">
+      <div class="migration-tabs">
+        <button class="migration-tab-btn active" data-target="mig-dockerfile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#2496ED" aria-hidden="true">
+            <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.186.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.083.185.185.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.082.185.184.185M23.76 9.89c-.365-2.072-2.184-3.593-4.309-3.606-.217 0-.433.017-.648.05-.72-1.748-2.45-2.984-4.475-3.003h-2.316a.465.465 0 00-.465.465v.698a.466.466 0 00.465.465h2.316c1.558.016 2.87 1.096 3.204 2.634.05.234.256.402.495.402.037 0 .074-.004.112-.013.3-.07.61-.106.924-.106 1.704.01 3.125 1.258 3.398 2.946.038.232.238.402.473.402h.176c.71 0 1.286.576 1.286 1.286 0 1.94-1.272 3.633-3.085 4.12-.228.061-.383.272-.37.508.082 1.547-.367 3.076-1.27 4.331-1.397 1.942-3.645 3.09-6.025 3.076-4.995 0-8.98-3.488-9.878-8.643a.47.47 0 00-.44-.393H.465A.465.465 0 010 14.537c0-.986.586-1.874 1.49-2.261l2.427-1.04a.465.465 0 00.285-.428V8.65c0-.257.208-.465.465-.465h.698c.257 0 .465.208.465.465v2.158a.465.465 0 00.465.465h15.226c.257 0 .465-.208.465-.465v-.698a.465.465 0 00-.465-.465H18.79a.465.465 0 01-.465-.465v-.698c0-.257.208-.465.465-.465h2.736c.257 0 .465.208.465.465v.698a.465.465 0 00.465.465h.885c.237 0 .44-.175.474-.41z"/>
+          </svg>
+          <span>From Dockerfile</span>
+        </button>
+        <button class="migration-tab-btn" data-target="mig-bake">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#38BDF8" aria-hidden="true">
+            <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.186.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.083.185.185.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.082.185.184.185M23.76 9.89c-.365-2.072-2.184-3.593-4.309-3.606-.217 0-.433.017-.648.05-.72-1.748-2.45-2.984-4.475-3.003h-2.316a.465.465 0 00-.465.465v.698a.466.466 0 00.465.465h2.316c1.558.016 2.87 1.096 3.204 2.634.05.234.256.402.495.402.037 0 .074-.004.112-.013.3-.07.61-.106.924-.106 1.704.01 3.125 1.258 3.398 2.946.038.232.238.402.473.402h.176c.71 0 1.286.576 1.286 1.286 0 1.94-1.272 3.633-3.085 4.12-.228.061-.383.272-.37.508.082 1.547-.367 3.076-1.27 4.331-1.397 1.942-3.645 3.09-6.025 3.076-4.995 0-8.98-3.488-9.878-8.643a.47.47 0 00-.44-.393H.465A.465.465 0 010 14.537c0-.986.586-1.874 1.49-2.261l2.427-1.04a.465.465 0 00.285-.428V8.65c0-.257.208-.465.465-.465h.698c.257 0 .465.208.465.465v2.158a.465.465 0 00.465.465h15.226c.257 0 .465-.208.465-.465v-.698a.465.465 0 00-.465-.465H18.79a.465.465 0 01-.465-.465v-.698c0-.257.208-.465.465-.465h2.736c.257 0 .465.208.465.465v.698a.465.465 0 00.465.465h.885c.237 0 .44-.175.474-.41z"/>
+          </svg>
+          <span>From Docker Bake</span>
+        </button>
+        <button class="migration-tab-btn" data-target="mig-makefile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#A78BFA" aria-hidden="true">
+            <path d="M5.072 13.931a.62.62 0 00-.52.338c-.114.211-.388.242-.516.201-.21-.07-.48-.119-.744.068-.263.187-.546.045-.495-.297.05-.34.172-.645.5-.83.713-.41.216-.695.607-1.108.394-.412.307-.537.293-1.1-1.326-.2-2.433-.67-2.603-1.282l-.086-.312.316.08a8.344 8.344 0 001.272.2c.42.023.754-.055 1.157-.184.404-.13.882-.363 1.348-.59.467-.228.92-.45 1.353-.55.433-.1.846-.076 1.378.077l.478.138-.377-.323c-.702-.602-1.36-1.572-1.83-2.627-.47-1.054-.75-2.19-.714-3.136.035-.945.385-1.688.948-2.176.563-.487 1.339-.712 2.22-.728.882-.015 1.868.179 2.846.545.979.366 1.95.897 2.656 1.543l.487.445-.045-.658c-.067-.98.118-1.92.518-2.646.4-.725 1.015-1.233 1.764-1.399.75-.166 1.634.024 2.476.473.842.45 1.642 1.159 2.122 1.996l.33.576.236-.624c.34-.9.96-1.637 1.767-2.072.806-.435 1.798-.564 2.744-.337.946.226 1.845.807 2.427 1.62.582.814.842 1.858.706 2.946l-.105.834.782-.315c1.013-.408 2.052-.468 2.923-.19.87.279 1.57.887 1.97 1.724.4 1.837-.15 1.84-.7 2.84-.55 1-.95 2.1-1.35 3.2-.4 1.1-.8 2.2-1.4 3.1-.6.9-1.4 1.6-2.4 2-.8.3-1.7.4-2.6.2-.9-.2-1.7-.7-2.4-1.4l-.5-.5-.1.7c-.2 1.2-.7 2.3-1.5 3.1-.8.8-1.8 1.4-2.9 1.6-1.1.2-2.3.1-3.4-.3s-2.1-1-2.9-1.8l-.6-.6-.1.8c-.1 1.1-.6 2.1-1.3 2.9-.7.8-1.6 1.3-2.6 1.5-1 .2-2.1.1-3.1-.3s-1.9-1.1-2.6-1.9z"/>
+          </svg>
+          <span>From Makefile</span>
+        </button>
+        <button class="migration-tab-btn" data-target="mig-dagger">
+          <svg width="18" height="18" viewBox="0 0 224 224" fill="none" aria-hidden="true">
+            <circle cx="112" cy="112" r="108" fill="#131226"/>
+            <path d="m19.003,91.949c-1.197,6.017-1.83,12.238-1.83,18.607,0,1.68.045,3.349.131,5.007,5.828.101,10.851-1.08,14.341-4.122,17.316-15.093,50.088-10.813,50.088-10.813,0,0-10.064-17.373-62.73-8.679Z" fill="#40b9bc"/>
+            <path d="m205.033,92.078c-53.363-9.003-63.522,8.55-63.522,8.55,0,0,32.772-4.28,50.088,10.813,3.642,3.174,8.955,4.319,15.109,4.098.085-1.65.13-3.311.13-4.983,0-6.323-.625-12.5-1.805-18.478Z" fill="#40b9bc"/>
+            <path d="m111.622,71.123s5.133-32.284,14.229-54.39c-4.52-.661-9.142-1.009-13.845-1.009-4.954,0-9.82.381-14.569,1.114,9.069,22.104,14.185,54.286,14.185,54.286Z" fill="#ef7b1a"/>
+            <path d="m112.005,205.389c2.637,0,5.248-.113,7.83-.324-6.257-10.857-6.608-27.388-6.608-37.614,0,0,6.271,27.898,13.917,36.729,25.54-4.098,47.672-18.39,62.087-38.575-2.647-2.523-8.447-5.971-16.359,1.205,0,0,3.482-13.76,19.115-7.329-2.887-7.665-10.533-12.994-19.352-12.318-9.369.719-16.955,8.426-17.553,17.803-.31,4.868,1.224,9.357,3.945,12.884-4.917.931-9.159,3.747-11.963,7.669-.736-4.542-4.665-8.014-9.415-8.014-2.149,0-4.125.718-5.72,1.916-2.111-1.731-4.413-4.432-6.701-7.864-6.033-9.049-8.646-22.826-9.643-30.72-.253-1.998-1.95-3.49-3.964-3.49s-3.711,1.491-3.964,3.49c-.997,7.894-4.301,21.671-10.335,30.72-7.696,11.544-13.083,12.699-16.29,0l-.059.014c-2.697-9.552-11.457-16.56-21.873-16.56-9.718,0-17.975,6.109-21.227,14.685,3.308,4.141,6.955,7.999,10.901,11.531,11.847-10.237,21.868,3.669,21.868,3.669-8.521-3.91-14.353-2.85-18.186-.538,11.383,9.196,24.934,15.812,39.769,18.96,6.191-7.115,12.151-20.345,12.151-20.345,0,4.483-2.58,14.902-6.401,21.382,4.578.679,9.262,1.035,14.029,1.035Z" fill="#fcc009"/>
+            <path d="m114.662,81.8c-.814-.902-1.927-1.352-3.04-1.352-1.113,0-2.226.451-3.04,1.352-21.482,23.789-26.751,55.728-20.574,59.974,6.458,4.44,14.532-14.932,23.211-15.133h.808c8.678.202,16.752,19.574,23.211,15.133,6.177-4.247.908-36.186-20.575-59.974Zm-3.04,31.568c-3.518,0-6.37-2.852-6.37-6.37s2.852-6.37,6.37-6.37c3.518,0,6.37,2.852,6.37,6.37s-2.852,6.37-6.37,6.37Z" fill="#ffffff"/>
+          </svg>
+          <span>From Dagger</span>
+        </button>
+        <button class="migration-tab-btn" data-target="mig-gha">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#2088FF" aria-hidden="true">
+            <path d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391 1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.504.504 0 0 1-.354.146zm9.353-.147l1.534-1.532a.504.504 0 0 0-.707-.707l-1.181 1.18-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001zM4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85zm2.03-2.436L4 6.602V3.406l2.557 1.61zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3h-2.08a3.503 3.503 0 0 1-3.46 3 3.502 3.502 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3 1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.502 3.502 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.008 5.008 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.482 2.482 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.502 3.502 0 0 1 3.46 3h2.08a3.503 3.503 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5zm-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5-1.122-2.5-2.5-2.5S9 19.122 9 20.5zM5 9c2.206 0 4-1.794 4-4S7.206 1 5 1 1 2.794 1 5s1.794 4 4 4zm9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm-13 8a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm12 0c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3.002c-.007.001-.013.005-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.503 3.503 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5zm-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5z"/>
+          </svg>
+          <span>From GitHub Actions</span>
+        </button>
+      </div>
+
+      <!-- Tab 1: From Dockerfile -->
+      <div class="migration-diff-view migration-panel" id="mig-dockerfile" style="display: grid;">
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#2496ED" aria-hidden="true">
+                <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.186.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.083.185.185.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.082.185.184.185M23.76 9.89c-.365-2.072-2.184-3.593-4.309-3.606-.217 0-.433.017-.648.05-.72-1.748-2.45-2.984-4.475-3.003h-2.316a.465.465 0 00-.465.465v.698a.466.466 0 00.465.465h2.316c1.558.016 2.87 1.096 3.204 2.634.05.234.256.402.495.402.037 0 .074-.004.112-.013.3-.07.61-.106.924-.106 1.704.01 3.125 1.258 3.398 2.946.038.232.238.402.473.402h.176c.71 0 1.286.576 1.286 1.286 0 1.94-1.272 3.633-3.085 4.12-.228.061-.383.272-.37.508.082 1.547-.367 3.076-1.27 4.331-1.397 1.942-3.645 3.09-6.025 3.076-4.995 0-8.98-3.488-9.878-8.643a.47.47 0 00-.44-.393H.465A.465.465 0 010 14.537c0-.986.586-1.874 1.49-2.261l2.427-1.04a.465.465 0 00.285-.428V8.65c0-.257.208-.465.465-.465h.698c.257 0 .465.208.465.465v2.158a.465.465 0 00.465.465h15.226c.257 0 .465-.208.465-.465v-.698a.465.465 0 00-.465-.465H18.79a.465.465 0 01-.465-.465v-.698c0-.257.208-.465.465-.465h2.736c.257 0 .465.208.465.465v.698a.465.465 0 00.465.465h.885c.237 0 .44-.175.474-.41z"/>
+              </svg>
+              <span class="mig-legacy-title">Standard Dockerfile</span>
+            </span>
+            <div class="window-file-tabs mig-legacy-file-tabs" role="tablist" style="display: none;"></div>
+          </div>
+          <pre class="window-body"><code class="mig-legacy-code"><span class="kw-cmd">FROM</span> <span class="kw-string">golang:1.27-alpine3.24</span> <span class="kw-cmd">AS</span> <span class="kw-target">deps</span>
+<span class="kw-cmd">WORKDIR</span> <span class="kw-string">/app</span>
+<span class="kw-cmd">COPY</span> go.mod go.sum ./
+<span class="kw-cmd">RUN</span> go mod download
+
+<span class="kw-cmd">FROM</span> <span class="kw-target">deps</span> <span class="kw-cmd">AS</span> <span class="kw-target">test</span>
+<span class="kw-cmd">COPY</span> *.go ./
+<span class="kw-cmd">RUN</span> go test -v ./...
+
+<span class="kw-cmd">FROM</span> <span class="kw-target">deps</span> <span class="kw-cmd">AS</span> <span class="kw-target">builder</span>
+<span class="kw-cmd">COPY</span> *.go ./
+<span class="kw-cmd">RUN</span> CGO_ENABLED=0 go build -o bin/app .
+
+<span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span> <span class="kw-cmd">AS</span> <span class="kw-target">runtime</span>
+<span class="kw-cmd">COPY</span> <span class="kw-flag">--from</span>=<span class="kw-target">builder</span> /app/bin/app /usr/local/bin/app
+<span class="kw-cmd">ENTRYPOINT</span> [<span class="kw-string">"/usr/local/bin/app"</span>]</code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="140" fill="none" stroke="#10B981" stroke-width="16"/>
+                <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                  <path d="m200 100 58 35-58 35-58-35z"/>
+                  <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+                </g>
+              </svg>
+              <span class="mig-earthfile-title">Earthfile (Direct Host Artifacts & Push Built-In)</span>
+            </span>
+          </div>
+          <pre class="window-body"><code class="mig-earthfile-code"><span class="kw-cmd">VERSION</span> <span class="kw-val">0.8</span>
+<span class="kw-cmd">FROM</span> <span class="kw-string">golang:1.27-alpine3.24</span>
+<span class="kw-cmd">WORKDIR</span> <span class="kw-string">/app</span>
+
+<span class="kw-target">deps</span>:
+  <span class="kw-cmd">COPY</span> go.mod go.sum ./
+  <span class="kw-cmd">RUN</span> go mod download
+
+<span class="kw-target">test</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> go test <span class="kw-flag">-v</span> ./...
+
+<span class="kw-target">build</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> <span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+  <span class="kw-cmd">SAVE ARTIFACT</span> bin/app <span class="kw-flag">AS LOCAL</span> bin/app
+
+<span class="kw-target">docker</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span>
+  <span class="kw-cmd">COPY</span> <span class="kw-target">+build</span>/bin/app /usr/local/bin/app
+  <span class="kw-cmd">ENTRYPOINT</span> [<span class="kw-string">"/usr/local/bin/app"</span>]
+  <span class="kw-cmd">SAVE IMAGE</span> <span class="kw-flag">--push</span> <span class="kw-string">docker.io/myorg/myapp:latest</span>
+
+<span class="kw-target">all</span>:
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+test</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+build</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+docker</span></code></pre>
+        </div>
+      </div>
+
+      <!-- Tab 2: From Docker Bake -->
+      <template id="tmpl-mig-bake">
+        <div class="migration-diff-view migration-panel" id="mig-bake" style="display: grid;">
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#38BDF8" aria-hidden="true">
+                <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.186.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.083.185.185.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.186v1.887c0 .102.082.185.184.185M23.76 9.89c-.365-2.072-2.184-3.593-4.309-3.606-.217 0-.433.017-.648.05-.72-1.748-2.45-2.984-4.475-3.003h-2.316a.465.465 0 00-.465.465v.698a.466.466 0 00.465.465h2.316c1.558.016 2.87 1.096 3.204 2.634.05.234.256.402.495.402.037 0 .074-.004.112-.013.3-.07.61-.106.924-.106 1.704.01 3.125 1.258 3.398 2.946.038.232.238.402.473.402h.176c.71 0 1.286.576 1.286 1.286 0 1.94-1.272 3.633-3.085 4.12-.228.061-.383.272-.37.508.082 1.547-.367 3.076-1.27 4.331-1.397 1.942-3.645 3.09-6.025 3.076-4.995 0-8.98-3.488-9.878-8.643a.47.47 0 00-.44-.393H.465A.465.465 0 010 14.537c0-.986.586-1.874 1.49-2.261l2.427-1.04a.465.465 0 00.285-.428V8.65c0-.257.208-.465.465-.465h.698c.257 0 .465.208.465.465v2.158a.465.465 0 00.465.465h15.226c.257 0 .465-.208.465-.465v-.698a.465.465 0 00-.465-.465H18.79a.465.465 0 01-.465-.465v-.698c0-.257.208-.465.465-.465h2.736c.257 0 .465.208.465.465v.698a.465.465 0 00.465.465h.885c.237 0 .44-.175.474-.41z"/>
+              </svg>
+              <span class="mig-legacy-title">Docker Buildx Bake</span>
+            </span>
+            <div class="window-file-tabs mig-legacy-file-tabs" role="tablist">
+              <button class="window-file-tab-btn active" data-file-idx="0" role="tab" aria-selected="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <span>docker-bake.hcl</span>
+              </button>
+              <button class="window-file-tab-btn" data-file-idx="1" role="tab" aria-selected="false">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <span>Dockerfile</span>
+              </button>
+            </div>
+          </div>
+          <pre class="window-body"><code class="mig-legacy-code"><span class="kw-cmd">group</span> <span class="kw-string">"default"</span> {
+  <span class="kw-prop">targets</span> = [<span class="kw-string">"test"</span>, <span class="kw-string">"build"</span>, <span class="kw-string">"image"</span>]
+}
+
+<span class="kw-cmd">target</span> <span class="kw-string">"test"</span> {
+  <span class="kw-prop">dockerfile</span> = <span class="kw-string">"Dockerfile"</span>
+  <span class="kw-prop">target</span>     = <span class="kw-string">"test"</span>
+}
+
+<span class="kw-cmd">target</span> <span class="kw-string">"build"</span> {
+  <span class="kw-prop">dockerfile</span> = <span class="kw-string">"Dockerfile"</span>
+  <span class="kw-prop">target</span>     = <span class="kw-string">"builder"</span>
+  <span class="kw-prop">output</span>     = [<span class="kw-string">"type=local,dest=bin"</span>]
+}
+
+<span class="kw-cmd">target</span> <span class="kw-string">"image"</span> {
+  <span class="kw-prop">dockerfile</span> = <span class="kw-string">"Dockerfile"</span>
+  <span class="kw-prop">target</span>     = <span class="kw-string">"runtime"</span>
+  <span class="kw-prop">tags</span>       = [<span class="kw-string">"docker.io/myorg/myapp:latest"</span>]
+  <span class="kw-prop">push</span>       = <span class="kw-val">true</span>
+}</code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="140" fill="none" stroke="#10B981" stroke-width="16"/>
+                <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                  <path d="m200 100 58 35-58 35-58-35z"/>
+                  <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+                </g>
+              </svg>
+              <span class="mig-earthfile-title">Earthfile (Unified Targets & Direct Artifacts)</span>
+            </span>
+          </div>
+          <pre class="window-body"><code class="mig-earthfile-code"><span class="kw-cmd">VERSION</span> <span class="kw-val">0.8</span>
+<span class="kw-cmd">FROM</span> <span class="kw-string">golang:1.27-alpine3.24</span>
+<span class="kw-cmd">WORKDIR</span> <span class="kw-string">/app</span>
+
+<span class="kw-target">deps</span>:
+  <span class="kw-cmd">COPY</span> go.mod go.sum ./
+  <span class="kw-cmd">RUN</span> go mod download
+
+<span class="kw-target">test</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> go test <span class="kw-flag">-v</span> ./...
+
+<span class="kw-target">build</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> <span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+  <span class="kw-cmd">SAVE ARTIFACT</span> bin/app <span class="kw-flag">AS LOCAL</span> bin/app
+
+<span class="kw-target">docker</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span>
+  <span class="kw-cmd">COPY</span> <span class="kw-target">+build</span>/bin/app /usr/local/bin/app
+  <span class="kw-cmd">ENTRYPOINT</span> [<span class="kw-string">"/usr/local/bin/app"</span>]
+  <span class="kw-cmd">SAVE IMAGE</span> <span class="kw-flag">--push</span> <span class="kw-string">docker.io/myorg/myapp:latest</span>
+
+<span class="kw-target">all</span>:
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+test</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+build</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+docker</span></code></pre>
+        </div>
+      </div>
+      </template>
+
+      <!-- Tab 3: From Makefile -->
+      <template id="tmpl-mig-makefile">
+        <div class="migration-diff-view migration-panel" id="mig-makefile" style="display: grid;">
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#A78BFA" aria-hidden="true">
+                <path d="M5.072 13.931a.62.62 0 00-.52.338c-.114.211-.388.242-.516.201-.21-.07-.48-.119-.744.068-.263.187-.546.045-.495-.297.05-.34.172-.645.5-.83.713-.41.216-.695.607-1.108.394-.412.307-.537.293-1.1-1.326-.2-2.433-.67-2.603-1.282l-.086-.312.316.08a8.344 8.344 0 001.272.2c.42.023.754-.055 1.157-.184.404-.13.882-.363 1.348-.59.467-.228.92-.45 1.353-.55.433-.1.846-.076 1.378.077l.478.138-.377-.323c-.702-.602-1.36-1.572-1.83-2.627-.47-1.054-.75-2.19-.714-3.136.035-.945.385-1.688.948-2.176.563-.487 1.339-.712 2.22-.728.882-.015 1.868.179 2.846.545.979.366 1.95.897 2.656 1.543l.487.445-.045-.658c-.067-.98.118-1.92.518-2.646.4-.725 1.015-1.233 1.764-1.399.75-.166 1.634.024 2.476.473.842.45 1.642 1.159 2.122 1.996l.33.576.236-.624c.34-.9.96-1.637 1.767-2.072.806-.435 1.798-.564 2.744-.337.946.226 1.845.807 2.427 1.62.582.814.842 1.858.706 2.946l-.105.834.782-.315c1.013-.408 2.052-.468 2.923-.19.87.279 1.57.887 1.97 1.724.4 1.837-.15 1.84-.7 2.84-.55 1-.95 2.1-1.35 3.2-.4 1.1-.8 2.2-1.4 3.1-.6.9-1.4 1.6-2.4 2-.8.3-1.7.4-2.6.2-.9-.2-1.7-.7-2.4-1.4l-.5-.5-.1.7c-.2 1.2-.7 2.3-1.5 3.1-.8.8-1.8 1.4-2.9 1.6-1.1.2-2.3.1-3.4-.3s-2.1-1-2.9-1.8l-.6-.6-.1.8c-.1 1.1-.6 2.1-1.3 2.9-.7.8-1.6 1.3-2.6 1.5-1 .2-2.1.1-3.1-.3s-1.9-1.1-2.6-1.9z"/>
+              </svg>
+              <span class="mig-legacy-title">Makefile (Host Execution)</span>
+            </span>
+            <div class="window-file-tabs mig-legacy-file-tabs" role="tablist">
+              <button class="window-file-tab-btn active" data-file-idx="0" role="tab" aria-selected="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <span>Makefile</span>
+              </button>
+              <button class="window-file-tab-btn" data-file-idx="1" role="tab" aria-selected="false">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <span>Dockerfile</span>
+              </button>
+            </div>
+          </div>
+          <pre class="window-body"><code class="mig-legacy-code"><span class="kw-target">.PHONY</span>: <span class="kw-target">all</span> <span class="kw-target">test</span> <span class="kw-target">build</span> <span class="kw-target">docker</span>
+
+<span class="kw-target">all</span>: <span class="kw-target">test</span> <span class="kw-target">build</span> <span class="kw-target">docker</span>
+
+<span class="kw-target">test</span>:
+	go test <span class="kw-flag">-v</span> ./...
+
+<span class="kw-target">build</span>:
+	<span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+
+<span class="kw-target">docker</span>: <span class="kw-target">build</span>
+	docker build <span class="kw-flag">-t</span> <span class="kw-string">docker.io/myorg/myapp:latest</span> .
+	docker push <span class="kw-string">docker.io/myorg/myapp:latest</span></code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="140" fill="none" stroke="#10B981" stroke-width="16"/>
+                <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                  <path d="m200 100 58 35-58 35-58-35z"/>
+                  <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+                </g>
+              </svg>
+              <span class="mig-earthfile-title">Earthfile (Hermetic & Parallel)</span>
+            </span>
+          </div>
+          <pre class="window-body"><code class="mig-earthfile-code"><span class="kw-cmd">VERSION</span> <span class="kw-val">0.8</span>
+<span class="kw-cmd">FROM</span> <span class="kw-string">golang:1.27-alpine3.24</span>
+<span class="kw-cmd">WORKDIR</span> <span class="kw-string">/app</span>
+
+<span class="kw-target">deps</span>:
+  <span class="kw-cmd">COPY</span> go.mod go.sum ./
+  <span class="kw-cmd">RUN</span> go mod download
+
+<span class="kw-target">test</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> go test <span class="kw-flag">-v</span> ./...
+
+<span class="kw-target">build</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> <span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+  <span class="kw-cmd">SAVE ARTIFACT</span> bin/app <span class="kw-flag">AS LOCAL</span> bin/app
+
+<span class="kw-target">docker</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span>
+  <span class="kw-cmd">COPY</span> <span class="kw-target">+build</span>/bin/app /usr/local/bin/app
+  <span class="kw-cmd">ENTRYPOINT</span> [<span class="kw-string">"/usr/local/bin/app"</span>]
+  <span class="kw-cmd">SAVE IMAGE</span> <span class="kw-flag">--push</span> <span class="kw-string">docker.io/myorg/myapp:latest</span>
+
+<span class="kw-target">all</span>:
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+test</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+build</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+docker</span></code></pre>
+        </div>
+      </div>
+      </template>
+
+      <!-- Tab 4: From Dagger -->
+      <template id="tmpl-mig-dagger">
+        <div class="migration-diff-view migration-panel" id="mig-dagger" style="display: grid;">
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 224 224" fill="none" aria-hidden="true">
+                <circle cx="112" cy="112" r="108" fill="#131226"/>
+                <path d="m19.003,91.949c-1.197,6.017-1.83,12.238-1.83,18.607,0,1.68.045,3.349.131,5.007,5.828.101,10.851-1.08,14.341-4.122,17.316-15.093,50.088-10.813,50.088-10.813,0,0-10.064-17.373-62.73-8.679Z" fill="#40b9bc"/>
+                <path d="m205.033,92.078c-53.363-9.003-63.522,8.55-63.522,8.55,0,0,32.772-4.28,50.088,10.813,3.642,3.174,8.955,4.319,15.109,4.098.085-1.65.13-3.311.13-4.983,0-6.323-.625-12.5-1.805-18.478Z" fill="#40b9bc"/>
+                <path d="m111.622,71.123s5.133-32.284,14.229-54.39c-4.52-.661-9.142-1.009-13.845-1.009-4.954,0-9.82.381-14.569,1.114,9.069,22.104,14.185,54.286,14.185,54.286Z" fill="#ef7b1a"/>
+                <path d="m112.005,205.389c2.637,0,5.248-.113,7.83-.324-6.257-10.857-6.608-27.388-6.608-37.614,0,0,6.271,27.898,13.917,36.729,25.54-4.098,47.672-18.39,62.087-38.575-2.647-2.523-8.447-5.971-16.359,1.205,0,0,3.482-13.76,19.115-7.329-2.887-7.665-10.533-12.994-19.352-12.318-9.369.719-16.955,8.426-17.553,17.803-.31,4.868,1.224,9.357,3.945,12.884-4.917.931-9.159,3.747-11.963,7.669-.736-4.542-4.665-8.014-9.415-8.014-2.149,0-4.125.718-5.72,1.916-2.111-1.731-4.413-4.432-6.701-7.864-6.033-9.049-8.646-22.826-9.643-30.72-.253-1.998-1.95-3.49-3.964-3.49s-3.711,1.491-3.964,3.49c-.997,7.894-4.301,21.671-10.335,30.72-7.696,11.544-13.083,12.699-16.29,0l-.059.014c-2.697-9.552-11.457-16.56-21.873-16.56-9.718,0-17.975,6.109-21.227,14.685,3.308,4.141,6.955,7.999,10.901,11.531,11.847-10.237,21.868,3.669,21.868,3.669-8.521-3.91-14.353-2.85-18.186-.538,11.383,9.196,24.934,15.812,39.769,18.96,6.191-7.115,12.151-20.345,12.151-20.345,0,4.483-2.58,14.902-6.401,21.382,4.578.679,9.262,1.035,14.029,1.035Z" fill="#fcc009"/>
+                <path d="m114.662,81.8c-.814-.902-1.927-1.352-3.04-1.352-1.113,0-2.226.451-3.04,1.352-21.482,23.789-26.751,55.728-20.574,59.974,6.458,4.44,14.532-14.932,23.211-15.133h.808c8.678.202,16.752,19.574,23.211,15.133,6.177-4.247.908-36.186-20.575-59.974Zm-3.04,31.568c-3.518,0-6.37-2.852-6.37-6.37s2.852-6.37,6.37-6.37c3.518,0,6.37,2.852,6.37,6.37s-2.852,6.37-6.37,6.37Z" fill="#ffffff"/>
+              </svg>
+              <span class="mig-legacy-title">Dagger (Go SDK)</span>
+            </span>
+            <div class="window-file-tabs mig-legacy-file-tabs" role="tablist" style="display: none;"></div>
+          </div>
+          <pre class="window-body"><code class="mig-legacy-code"><span class="kw-cmd">package</span> main
+
+<span class="kw-cmd">import</span> (
+  <span class="kw-string">"context"</span>
+  <span class="kw-string">"dagger/pipeline/internal/dagger"</span>
+)
+
+<span class="kw-cmd">type</span> <span class="kw-type">Pipeline</span> <span class="kw-cmd">struct</span>{}
+
+<span class="kw-cmd">func</span> (<span class="kw-var">m</span> *<span class="kw-type">Pipeline</span>) <span class="kw-fn">base</span>(<span class="kw-var">src</span> *<span class="kw-type">dagger.Directory</span>) *<span class="kw-type">dagger.Container</span> {
+  <span class="kw-cmd">return</span> <span class="kw-var">dag</span>.<span class="kw-fn">Container</span>().
+    <span class="kw-fn">From</span>(<span class="kw-string">"golang:1.27-alpine3.24"</span>).
+    <span class="kw-fn">WithWorkdir</span>(<span class="kw-string">"/app"</span>).
+    <span class="kw-fn">WithDirectory</span>(<span class="kw-string">"."</span>, <span class="kw-var">src</span>, <span class="kw-type">dagger.ContainerWithDirectoryOpts</span>{<span class="kw-prop">Include</span>: []<span class="kw-type">string</span>{<span class="kw-string">"go.mod"</span>, <span class="kw-string">"go.sum"</span>}}).
+    <span class="kw-fn">WithExec</span>([]<span class="kw-type">string</span>{<span class="kw-string">"go"</span>, <span class="kw-string">"mod"</span>, <span class="kw-string">"download"</span>}).
+    <span class="kw-fn">WithDirectory</span>(<span class="kw-string">"."</span>, <span class="kw-var">src</span>, <span class="kw-type">dagger.ContainerWithDirectoryOpts</span>{<span class="kw-prop">Include</span>: []<span class="kw-type">string</span>{<span class="kw-string">"*.go"</span>}})
+}
+
+<span class="kw-cmd">func</span> (<span class="kw-var">m</span> *<span class="kw-type">Pipeline</span>) <span class="kw-fn">Test</span>(<span class="kw-var">ctx</span> <span class="kw-type">context.Context</span>, <span class="kw-var">src</span> *<span class="kw-type">dagger.Directory</span>) (<span class="kw-type">string</span>, <span class="kw-type">error</span>) {
+  <span class="kw-cmd">return</span> <span class="kw-var">m</span>.<span class="kw-fn">base</span>(<span class="kw-var">src</span>).<span class="kw-fn">WithExec</span>([]<span class="kw-type">string</span>{<span class="kw-string">"go"</span>, <span class="kw-string">"test"</span>, <span class="kw-string">"-v"</span>, <span class="kw-string">"./..."</span>}).<span class="kw-fn">Stdout</span>(<span class="kw-var">ctx</span>)
+}
+
+<span class="kw-cmd">func</span> (<span class="kw-var">m</span> *<span class="kw-type">Pipeline</span>) <span class="kw-fn">Build</span>(<span class="kw-var">ctx</span> <span class="kw-type">context.Context</span>, <span class="kw-var">src</span> *<span class="kw-type">dagger.Directory</span>) (*<span class="kw-type">dagger.File</span>, <span class="kw-type">error</span>) {
+  <span class="kw-var">bin</span> := <span class="kw-var">m</span>.<span class="kw-fn">base</span>(<span class="kw-var">src</span>).
+    <span class="kw-fn">WithEnvVariable</span>(<span class="kw-string">"CGO_ENABLED"</span>, <span class="kw-string">"0"</span>).
+    <span class="kw-fn">WithExec</span>([]<span class="kw-type">string</span>{<span class="kw-string">"go"</span>, <span class="kw-string">"build"</span>, <span class="kw-string">"-o"</span>, <span class="kw-string">"bin/app"</span>, <span class="kw-string">"."</span>}).
+    <span class="kw-fn">File</span>(<span class="kw-string">"bin/app"</span>)
+
+  <span class="kw-cmd">if</span> <span class="kw-var">_</span>, <span class="kw-var">err</span> := <span class="kw-var">bin</span>.<span class="kw-fn">Export</span>(<span class="kw-var">ctx</span>, <span class="kw-string">"bin/app"</span>); <span class="kw-var">err</span> != <span class="kw-val">nil</span> {
+    <span class="kw-cmd">return</span> <span class="kw-val">nil</span>, <span class="kw-var">err</span>
+  }
+  <span class="kw-cmd">return</span> <span class="kw-var">bin</span>, <span class="kw-val">nil</span>
+}
+
+<span class="kw-cmd">func</span> (<span class="kw-var">m</span> *<span class="kw-type">Pipeline</span>) <span class="kw-fn">Publish</span>(<span class="kw-var">ctx</span> <span class="kw-type">context.Context</span>, <span class="kw-var">src</span> *<span class="kw-type">dagger.Directory</span>) (<span class="kw-type">string</span>, <span class="kw-type">error</span>) {
+  <span class="kw-var">bin</span>, <span class="kw-var">err</span> := <span class="kw-var">m</span>.<span class="kw-fn">Build</span>(<span class="kw-var">ctx</span>, <span class="kw-var">src</span>)
+  <span class="kw-cmd">if</span> <span class="kw-var">err</span> != <span class="kw-val">nil</span> {
+    <span class="kw-cmd">return</span> <span class="kw-string">""</span>, <span class="kw-var">err</span>
+  }
+  <span class="kw-cmd">return</span> <span class="kw-var">dag</span>.<span class="kw-fn">Container</span>().
+    <span class="kw-fn">From</span>(<span class="kw-string">"alpine:3.24"</span>).
+    <span class="kw-fn">WithFile</span>(<span class="kw-string">"/usr/local/bin/app"</span>, <span class="kw-var">bin</span>).
+    <span class="kw-fn">WithEntrypoint</span>([]<span class="kw-type">string</span>{<span class="kw-string">"/usr/local/bin/app"</span>}).
+    <span class="kw-fn">Publish</span>(<span class="kw-var">ctx</span>, <span class="kw-string">"docker.io/myorg/myapp:latest"</span>)
+}</code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="140" fill="none" stroke="#10B981" stroke-width="16"/>
+                <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                  <path d="m200 100 58 35-58 35-58-35z"/>
+                  <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+                </g>
+              </svg>
+              <span class="mig-earthfile-title">Earthfile</span>
+            </span>
+          </div>
+          <pre class="window-body"><code class="mig-earthfile-code"><span class="kw-cmd">VERSION</span> <span class="kw-val">0.8</span>
+<span class="kw-cmd">FROM</span> <span class="kw-string">golang:1.27-alpine3.24</span>
+<span class="kw-cmd">WORKDIR</span> <span class="kw-string">/app</span>
+
+<span class="kw-target">deps</span>:
+  <span class="kw-cmd">COPY</span> go.mod go.sum ./
+  <span class="kw-cmd">RUN</span> go mod download
+
+<span class="kw-target">test</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> go test <span class="kw-flag">-v</span> ./...
+
+<span class="kw-target">build</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-target">+deps</span>
+  <span class="kw-cmd">COPY</span> *.go ./
+  <span class="kw-cmd">RUN</span> <span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+  <span class="kw-cmd">SAVE ARTIFACT</span> bin/app <span class="kw-flag">AS LOCAL</span> bin/app
+
+<span class="kw-target">docker</span>:
+  <span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span>
+  <span class="kw-cmd">COPY</span> <span class="kw-target">+build</span>/bin/app /usr/local/bin/app
+  <span class="kw-cmd">ENTRYPOINT</span> [<span class="kw-string">"/usr/local/bin/app"</span>]
+  <span class="kw-cmd">SAVE IMAGE</span> <span class="kw-flag">--push</span> <span class="kw-string">docker.io/myorg/myapp:latest</span>
+
+<span class="kw-target">all</span>:
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+test</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+build</span>
+  <span class="kw-cmd">BUILD</span> <span class="kw-target">+docker</span></code></pre>
+        </div>
+      </div>
+      </template>
+
+      <!-- Tab 5: From GitHub Actions -->
+      <template id="tmpl-mig-gha">
+        <div class="migration-diff-view migration-panel" id="mig-gha" style="display: grid;">
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#2088FF" aria-hidden="true">
+                <path d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391 1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.504.504 0 0 1-.354.146zm9.353-.147l1.534-1.532a.504.504 0 0 0-.707-.707l-1.181 1.18-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001zM4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85zm2.03-2.436L4 6.602V3.406l2.557 1.61zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3h-2.08a3.503 3.503 0 0 1-3.46 3 3.502 3.502 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3 1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.502 3.502 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.008 5.008 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.482 2.482 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.502 3.502 0 0 1 3.46 3h2.08a3.503 3.503 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5zm-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5-1.122-2.5-2.5-2.5S9 19.122 9 20.5zM5 9c2.206 0 4-1.794 4-4S7.206 1 5 1 1 2.794 1 5s1.794 4 4 4zm9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm-13 8a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm12 0c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3.002c-.007.001-.013.005-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.503 3.503 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5zm-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5z"/>
+              </svg>
+              <span class="mig-legacy-title">Standard GitHub Actions Workflow</span>
+            </span>
+            <div class="window-file-tabs mig-legacy-file-tabs" role="tablist" style="display: none;"></div>
+          </div>
+          <pre class="window-body"><code class="mig-legacy-code"><span class="kw-prop">name</span>: <span class="kw-string">CI &amp; Release</span>
+<span class="kw-prop">on</span>: [<span class="kw-string">push</span>]
+
+<span class="kw-prop">jobs</span>:
+  <span class="kw-prop">pipeline</span>:
+    <span class="kw-prop">runs-on</span>: <span class="kw-string">ubuntu-latest</span>
+    <span class="kw-prop">steps</span>:
+      - <span class="kw-prop">uses</span>: <span class="kw-string">actions/checkout@v4</span>
+      - <span class="kw-prop">uses</span>: <span class="kw-string">actions/setup-go@v5</span>
+        <span class="kw-prop">with</span>: { <span class="kw-prop">go-version</span>: <span class="kw-string">'1.27'</span> }
+      - <span class="kw-prop">uses</span>: <span class="kw-string">actions/cache@v4</span>
+        <span class="kw-prop">with</span>:
+          <span class="kw-prop">path</span>: <span class="kw-string">~/go/pkg/mod</span>
+          <span class="kw-prop">key</span>: <span class="kw-expr">${{ "{{" }} runner.os {{ "}}" }}-go-${{ "{{" }} hashFiles('go.sum') {{ "}}" }}</span>
+
+      - <span class="kw-prop">name</span>: <span class="kw-string">Run Tests</span>
+        <span class="kw-prop">run</span>: go test <span class="kw-flag">-v</span> ./...
+
+      - <span class="kw-prop">name</span>: <span class="kw-string">Build Host Binary</span>
+        <span class="kw-prop">run</span>: <span class="kw-val">CGO_ENABLED=0</span> go build <span class="kw-flag">-o</span> bin/app .
+
+      - <span class="kw-prop">uses</span>: <span class="kw-string">actions/upload-artifact@v4</span>
+        <span class="kw-prop">with</span>:
+          <span class="kw-prop">name</span>: <span class="kw-string">app-binary</span>
+          <span class="kw-prop">path</span>: <span class="kw-string">bin/app</span>
+
+      - <span class="kw-prop">uses</span>: <span class="kw-string">docker/login-action@v3</span>
+        <span class="kw-prop">with</span>:
+          <span class="kw-prop">username</span>: <span class="kw-expr">${{ "{{" }} secrets.DOCKER_USER {{ "}}" }}</span>
+          <span class="kw-prop">password</span>: <span class="kw-expr">${{ "{{" }} secrets.DOCKER_TOKEN {{ "}}" }}</span>
+
+      - <span class="kw-prop">uses</span>: <span class="kw-string">docker/build-push-action@v6</span>
+        <span class="kw-prop">with</span>:
+          <span class="kw-prop">context</span>: <span class="kw-string">.</span>
+          <span class="kw-prop">push</span>: <span class="kw-val">true</span>
+          <span class="kw-prop">tags</span>: <span class="kw-string">docker.io/myorg/myapp:latest</span></code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="window-header">
+            <span class="window-title">
+              <svg width="15" height="15" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="140" fill="none" stroke="#10B981" stroke-width="16"/>
+                <g fill="none" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                  <path d="m200 100 58 35-58 35-58-35z"/>
+                  <path d="m142 135 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 65 58 35v35l-58-35zm116 0-58 35v35l58-35zm-116 0 24-14m92 14-24-14"/>
+                </g>
+              </svg>
+              <span class="mig-earthfile-title">Clean GitHub Action with EarthBuild</span>
+            </span>
+          </div>
+          <pre class="window-body"><code class="mig-earthfile-code"><span class="kw-prop">name</span>: <span class="kw-string">CI &amp; Release</span>
+<span class="kw-prop">on</span>: [<span class="kw-string">push</span>]
+
+<span class="kw-prop">jobs</span>:
+  <span class="kw-prop">pipeline</span>:
+    <span class="kw-prop">runs-on</span>: <span class="kw-string">ubuntu-latest</span>
+    <span class="kw-prop">steps</span>:
+      - <span class="kw-prop">uses</span>: <span class="kw-string">actions/checkout@v4</span>
+
+      - <span class="kw-prop">uses</span>: <span class="kw-string">docker/login-action@v3</span>
+        <span class="kw-prop">with</span>:
+          <span class="kw-prop">username</span>: <span class="kw-expr">${{ "{{" }} secrets.DOCKER_USER {{ "}}" }}</span>
+          <span class="kw-prop">password</span>: <span class="kw-expr">${{ "{{" }} secrets.DOCKER_TOKEN {{ "}}" }}</span>
+
+      - <span class="kw-prop">name</span>: <span class="kw-string">Setup EarthBuild</span>
+        <span class="kw-prop">uses</span>: <span class="kw-string">earthbuild/actions-setup@v2</span>
+
+      - <span class="kw-prop">name</span>: <span class="kw-string">Test, Build Binary &amp; Push Image</span>
+        <span class="kw-prop">run</span>: <span class="kw-cmd">earth</span> <span class="kw-flag">--ci</span> <span class="kw-flag">--push</span> <span class="kw-target">+all</span></code></pre>
+        </div>
+      </div>
+      </template>
+    </div>
+  </div>
+</section>

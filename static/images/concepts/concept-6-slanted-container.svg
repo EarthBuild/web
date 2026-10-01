@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="s-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="s-mint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="s-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <!-- Forward-slanted isometric cube: container meets velocity -->
+  <g transform="translate(256, 256) skewX(-12) scale(0.88) translate(-256, -256)">
+    <!-- Top Face -->
+    <path d="M 256,64 L 396,146 L 256,228 L 116,146 Z" fill="url(#s-cyan)"/>
+    <!-- Left Face -->
+    <path d="M 104,166 L 246,248 L 246,412 L 104,330 Z" fill="url(#s-mint)"/>
+    <!-- Right Face (Forward Thrust) -->
+    <path d="M 266,248 L 408,166 L 408,330 L 266,412 Z" fill="url(#s-emerald)"/>
+  </g>
+</svg>

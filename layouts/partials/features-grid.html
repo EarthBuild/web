@@ -1,0 +1,83 @@
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">Built for</span> <span class="hero-accent-shimmer text-gradient">Maximum Engineering Velocity</span></h2>
+      <p class="section-subtitle">
+        Everything you need to orchestrate complex polyglot builds, monorepos, and multi-service systems without cognitive fatigue.
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Feature 1: Featured 2 columns -->
+      <div class="bento-card bento-card-featured">
+        <div class="bento-icon">⚡</div>
+        <h3>Automatic Parallelism</h3>
+        <p>
+          EarthBuild automatically discovers target dependencies and runs independent steps in parallel simultaneously, fully utilizing your CPU cores and network bandwidth without race conditions.
+        </p>
+
+        <div class="bento-card-snippet">
+          <span class="kw-target">docker</span>:<br>
+          &nbsp;&nbsp;<span class="kw-cmd">FROM</span> <span class="kw-string">alpine:3.24</span><br>
+          &nbsp;&nbsp;<span class="kw-cmd">COPY</span> <span class="kw-target">+backend</span>/server ./bin/server &nbsp;<span class="kw-comment"># Compiles Go backend</span><br>
+          &nbsp;&nbsp;<span class="kw-cmd">COPY</span> <span class="kw-target">+frontend</span>/dist ./public &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw-comment"># Compiles React in parallel!</span><br>
+          &nbsp;&nbsp;<span class="kw-cmd">SAVE IMAGE</span> <span class="kw-string">my-app:latest</span>
+        </div>
+      </div>
+
+      <!-- Feature 2: Container Engine Support & Isolation -->
+      <div class="bento-card">
+        <div class="bento-icon">📦</div>
+        <h3>Docker, Podman & Apple Containers</h3>
+        <p>
+          Supports <strong>Podman</strong>, <strong>Docker</strong>, and <strong>Apple container engines</strong> out-of-the-box by default. Zero host toolchain contamination with complete container isolation.
+        </p>
+      </div>
+
+      <!-- Feature 3: Universal File & Image Output -->
+      <div class="bento-card">
+        <div class="bento-icon">💾</div>
+        <h3>Universal File & Image Output</h3>
+        <p>
+          While extracting host files with Docker typically requires dedicated <code>--output type=local</code> stages or <code>docker cp</code>, EarthBuild natively exports compiled binaries, test reports, and container images simultaneously in a single build pass.
+        </p>
+        <div class="bento-card-snippet">
+          <span class="kw-cmd">SAVE ARTIFACT</span> dist/binary <span class="kw-flag">AS LOCAL</span> ./bin/binary
+        </div>
+      </div>
+
+      <!-- Feature 4: Polyglot Monorepo & Imports -->
+      <div class="bento-card">
+        <div class="bento-icon">🏘</div>
+        <h3>Monorepo & Remote Repo Imports</h3>
+        <p>
+          Reference and execute targets across nested subdirectories or remote Git repositories with pinpoint caching. Re-use shared proto generators, linters, or base images with one line.
+        </p>
+        <div class="bento-card-snippet">
+          <span class="kw-cmd">BUILD</span> github.com/myorg/toolchain:v2.1<span class="kw-target">+generate</span>
+        </div>
+      </div>
+
+      <!-- Feature 5: Multi-Platform -->
+      <div class="bento-card">
+        <div class="bento-icon">🌐</div>
+        <h3>Native Multi-Platform Builds</h3>
+        <p>
+          Build for multiple CPU architectures simultaneously (e.g. <code>linux/amd64</code> and <code>linux/arm64</code>). Test Apple Silicon and AWS Graviton targets locally with zero hassle.
+        </p>
+      </div>
+
+      <!-- Feature 6: Secure Secrets -->
+      <div class="bento-card bento-card-featured">
+        <div class="bento-icon">🔑</div>
+        <h3>Zero-Leak Secret Management</h3>
+        <p>
+          Mount API keys, deploy tokens, and NPM/GitHub credentials at build time without ever baking them into container layers or build artifacts. Pass secrets via CLI, environment, or secret managers safely.
+        </p>
+        <div class="bento-card-snippet">
+          <span class="kw-cmd">RUN</span> <span class="kw-flag">--secret</span> GITHUB_TOKEN=<span class="kw-target">+secrets</span>/token gh release upload
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
