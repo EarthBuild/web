@@ -5,9 +5,13 @@
   {{ partial "features-grid.html" . }}
   {{ partial "security-ai.html" . }}
   {{ partial "interactive-code.html" . }}
-  {{ partial "comparison-matrix.html" . }}
+  {{ if or (not hugo.IsProduction) hugo.IsServer }}
+    {{ partial "comparison-matrix.html" . }}
+  {{ end }}
   {{ partial "roi-calculator.html" . }}
-  {{ partial "migration-guide.html" . }}
-  {{ partial "testimonials.html" . }}
+  {{ if or (not hugo.IsProduction) hugo.IsServer }}
+    {{ partial "migration-guide.html" . }}
+    {{ partial "testimonials.html" . }}
+  {{ end }}
   {{ partial "quickstart-cta.html" . }}
 {{ end }}

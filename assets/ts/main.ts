@@ -12,6 +12,7 @@ import { initRoiCalculator } from './roi';
 import { initComparisonFilters, initMigrationTabs } from './comparison';
 import { initDigitalEarth } from './digital-earth';
 import { initHeadingAnchorLinks } from './anchor-links';
+import { initWipController } from './wip';
 
 function scheduleDigitalEarth(): void {
   const canvas = document.getElementById('digitalEarthCanvas');
@@ -55,6 +56,7 @@ function scheduleDigitalEarth(): void {
 }
 
 function runInit(): void {
+  initWipController();
   initNavbar();
   initClipboard();
   initHeadingAnchorLinks();

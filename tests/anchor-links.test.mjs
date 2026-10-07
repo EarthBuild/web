@@ -34,7 +34,7 @@ describe('Heading Anchor Links & Geometry E2E', () => {
       });
     });
 
-    assert.ok(mobileGeom.length >= 7, 'Should have heading anchor buttons across main sections');
+    assert.ok(mobileGeom.length >= 5, 'Should have heading anchor buttons across main sections');
     const offscreenButtons = mobileGeom.filter((b) => b.isOffscreen);
     assert.equal(
       offscreenButtons.length,

@@ -3477,3 +3477,274 @@ h3[id],
   animation: anchor-flash 1.4s ease-out;
 }
 
+/* ==========================================================================
+   Work-In-Progress (WIP) & Under Construction Elements (Local Development)
+   ========================================================================== */
+
+/* Warning accent stripes along top and bottom edges of under-construction sections */
+section[data-wip-section] {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.025) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 100%, rgba(245, 158, 11, 0.025) 0%, transparent 60%);
+}
+
+section[data-wip-section]::before,
+section[data-wip-section]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--accent-amber),
+    var(--accent-amber) 12px,
+    rgba(15, 23, 42, 0.85) 12px,
+    rgba(15, 23, 42, 0.85) 24px
+  );
+  opacity: 0.95;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  z-index: 10;
+}
+
+section[data-wip-section]::before {
+  top: 0;
+}
+
+section[data-wip-section]::after {
+  bottom: 0;
+}
+
+/* Under Construction Banner inside revealed sections */
+.under-construction-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.85rem 1.35rem;
+  margin-bottom: 2.25rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.03) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.32);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 0 15px rgba(245, 158, 11, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.under-construction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.32rem 0.8rem;
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FCD34D;
+  flex-shrink: 0;
+}
+
+.under-construction-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+  animation: pulseDot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+.under-construction-icon {
+  color: #FCD34D;
+  flex-shrink: 0;
+}
+
+.under-construction-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #FDE68A;
+  line-height: 1.5;
+}
+
+.under-construction-text strong {
+  color: #FFF;
+  font-weight: 600;
+}
+
+/* End-of-Section Boundary Banner inside revealed WIP sections */
+.under-construction-end-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0.85rem 1.35rem;
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.07) 0%, rgba(15, 23, 42, 0.75) 100%);
+  border: 1px dashed rgba(245, 158, 11, 0.45);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 0 15px rgba(245, 158, 11, 0.05);
+}
+
+.under-construction-end-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.32rem 0.8rem;
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FCD34D;
+  flex-shrink: 0;
+}
+
+.under-construction-end-badge svg {
+  color: #FCD34D;
+  animation: bounceChevron 2s infinite ease-in-out;
+}
+
+@keyframes bounceChevron {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.under-construction-end-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #FDE68A;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.under-construction-end-text strong {
+  color: #FFF;
+  font-weight: 600;
+}
+
+.under-construction-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FCD34D;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.32);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.under-construction-back-link:hover {
+  background: rgba(245, 158, 11, 0.22);
+  border-color: rgba(251, 191, 36, 0.6);
+  color: #FFF;
+}
+
+/* Floating Preview Mode Toast */
+.wip-preview-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #FCD34D;
+  animation: slideUpFade 0.3s ease-out;
+}
+
+.wip-preview-toast-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+  animation: pulseDot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+.wip-preview-toast-text {
+  color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+.wip-preview-toast-text strong {
+  color: #FCD34D;
+  font-weight: 600;
+}
+
+.wip-preview-toast-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+  margin-left: 0.25rem;
+}
+
+.wip-preview-toast-close:hover {
+  background: rgba(245, 158, 11, 0.3);
+  color: #FFF;
+}
+
+@media (max-width: 600px) {
+  .under-construction-banner,
+  .under-construction-end-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .under-construction-end-banner {
+    margin-top: 2.5rem;
+  }
+
+  .wip-preview-toast {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    justify-content: space-between;
+    border-radius: var(--radius-md);
+  }
+}
+
+

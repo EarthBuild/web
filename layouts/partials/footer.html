@@ -29,7 +29,9 @@
         <ul class="footer-links">
           <li><a href="/#features">Features</a></li>
           <li><a href="/#code-explorer">Interactive Syntax</a></li>
-          <li><a href="/#comparison">Compare Tools</a></li>
+          {{ if or (not hugo.IsProduction) hugo.IsServer }}
+            <li data-wip-section="comparison"><a href="/#comparison">Compare Tools</a></li>
+          {{ end }}
           <li><a href="/#calculator">Savings Calculator</a></li>
           <li><a href="/install/">Installation</a></li>
           <li><a href="/faq/">Technical FAQ</a></li>

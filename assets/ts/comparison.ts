@@ -118,9 +118,11 @@ export function initComparisonFilters(): void {
 }
 
 export function initMigrationTabs(): void {
+  const container = document.querySelector<HTMLElement>('.migration-container');
+  if (!container) return;
+
   const migLangTabs = document.querySelectorAll<HTMLButtonElement>('#migLangTabs .race-tab-btn');
   const migToolTabs = document.querySelectorAll<HTMLButtonElement>('.migration-tab-btn');
-  const container = document.querySelector<HTMLElement>('.migration-container');
 
   // Language Tabs in Migration Section
   migLangTabs.forEach((tab) => {
