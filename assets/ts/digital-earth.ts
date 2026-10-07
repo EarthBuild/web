@@ -235,8 +235,21 @@ function getEarthFeature(lat: number, lon: number): { type: string; color: numbe
   return { type: 'ocean', color: VOXEL_COLORS.brightBlue };
 }
 
-const THREE_LOCAL_URL = '/js/three.min.js';
 const THREE_CDN_URL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+
+function getThreeLocalUrl(): string {
+  const bundleScript = document.querySelector<HTMLScriptElement>('script[src*="bundle"]');
+  if (bundleScript && bundleScript.src) {
+    try {
+      const bundleUrl = new URL(bundleScript.src, window.location.href);
+      const jsDir = bundleUrl.pathname.substring(0, bundleUrl.pathname.lastIndexOf('/'));
+      return `${bundleUrl.origin}${jsDir}/three.min.js`;
+    } catch {
+      // fallback to domain root
+    }
+  }
+  return '/js/three.min.js';
+}
 
 function injectScript(src: string): Promise<boolean> {
   return new Promise((resolve) => {
@@ -263,7 +276,7 @@ async function loadThreeScript(): Promise<void> {
   if (typeof THREE !== 'undefined') return;
 
   // 1. Try local self-hosted Three.js first (instant, zero third-party CDN failure, works offline)
-  await injectScript(THREE_LOCAL_URL);
+  await injectScript(getThreeLocalUrl());
   if (typeof THREE !== 'undefined') return;
 
   // 2. Fallback to Cloudflare CDN if local script fails

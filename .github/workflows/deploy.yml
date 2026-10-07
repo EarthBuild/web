@@ -52,8 +52,15 @@ jobs:
 
       - name: Build
         env:
-          BASE_URL: ${{ steps.pages.outputs.base_url }}/
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
         run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_URL="/"
+          elif [ -n "$PAGES_BASE_URL" ]; then
+            BASE_URL="${PAGES_BASE_URL}/"
+          else
+            BASE_URL="/"
+          fi
           earth --ci --output +build --BASE_URL="$BASE_URL"
 
       - name: Upload Pages artifact
