@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="doc-page">
+  <div class="container container-narrow">
+    <div class="doc-header">
+      <span class="section-tag">{{ .Section | humanize }}</span>
+      <h1 class="section-title"><span class="hero-accent-shimmer text-gradient">{{ .Title }}</span></h1>
+      {{ with .Description }}
+        <p class="section-subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="doc-content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

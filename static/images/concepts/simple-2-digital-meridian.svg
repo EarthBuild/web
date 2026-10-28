@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Left Half: Solid Celestial Arc -->
+  <path d="M 100 20 A 80 80 0 0 0 100 180 Z" fill="#0369A1"/>
+  
+  <!-- Right Outer Rim (Electric Cyan) -->
+  <path d="M 100 20 A 80 80 0 0 1 100 180" stroke="#38BDF8" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Inner Digital Meridian (Emerald Green) -->
+  <path d="M 100 20 A 42 80 0 0 1 100 180" stroke="#10B981" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Equator Line -->
+  <line x1="100" y1="100" x2="180" y2="100" stroke="#34D399" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Key Intersection Nodes -->
+  <circle cx="142" cy="100" r="9" fill="#10B981"/>
+  <circle cx="180" cy="100" r="9" fill="#38BDF8"/>
+  <circle cx="130" cy="45" r="7" fill="#38BDF8"/>
+  <circle cx="130" cy="155" r="7" fill="#34D399"/>
+</svg>

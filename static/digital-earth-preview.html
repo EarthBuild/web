@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarthBuild — Digital Shadow Earth Logo Explorations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070B14;
+      --card-bg: #0B1322;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #38BDF8;
+      --accent-emerald: #10B981;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      padding: 3rem 1.5rem;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #FFFFFF 40%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .quote-box {
+      margin: 2rem auto 0;
+      max-width: 650px;
+      background: rgba(56, 189, 248, 0.05);
+      border-left: 3px solid var(--accent-cyan);
+      padding: 0.85rem 1.25rem;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFF;
+    }
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+    }
+    .image-stage {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #040810;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .image-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .nav-preview {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .nav-preview img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .brand-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFF;
+    }
+    .brand-text span {
+      color: var(--accent-emerald);
+    }
+    .nav-hint {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="tag">New Creative Direction</div>
+      <h1>Earth in Space: The Digital Shadow</h1>
+      <p class="lead">Earth seen from space divided into day and night. The shadow hemisphere comes alive as an illuminated digital matrix of glowing electric cyan and emerald green circuitry, container nodes, and data streams.</p>
+      <div class="quote-box">
+        "let's imagine Earth, looking from space, half in shadow, let's make shadow part digital, a light one, green and blue"
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- CONCEPT 1 -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">1. The Vector Circuit Globe</div>
+          <span class="card-badge">CLEAN GRAPHIC DESIGN</span>
+        </div>
+        <p class="card-desc">Flat graphic design aesthetic. Day side shows dark celestial blue ocean & continents; the shadow side is traced with crisp electric cyan and emerald green circuit board tracks and constellation nodes.</p>
+        <div class="image-stage">
+          <img src="/images/concepts/earth_digital_shadow_vector.jpg" alt="Vector Circuit Globe">
+        </div>
+        <div class="nav-preview">
+          <img src="/images/concepts/earth_digital_shadow_vector.jpg" alt="Mark">
+          <div class="brand-text">Earth<span>Build</span></div>
+          <span class="nav-hint">Navbar Lockup Preview</span>
+        </div>
+      </div>
+
+      <!-- CONCEPT 2 -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">2. DAG Network & Container Blocks</div>
+          <span class="card-badge">BUILD ARCHITECTURE</span>
+        </div>
+        <p class="card-desc">The night hemisphere is alive with illuminated container boxes, interconnected DAG pipeline nodes, and laser data channels spanning across the globe in electric cyan and emerald.</p>
+        <div class="image-stage">
+          <img src="/images/concepts/earth_digital_dag_nodes.jpg" alt="DAG Network Globe">
+        </div>
+        <div class="nav-preview">
+          <img src="/images/concepts/earth_digital_dag_nodes.jpg" alt="Mark">
+          <div class="brand-text">Earth<span>Build</span></div>
+          <span class="nav-hint">Navbar Lockup Preview</span>
+        </div>
+      </div>
+
+      <!-- CONCEPT 3 -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">3. The Container Honeycomb Grid</div>
+          <span class="card-badge">GEOMETRIC EMBLEM</span>
+        </div>
+        <p class="card-desc">Minimalist Swiss emblem. Left half is a sleek dark globe silhouette; right half is an intensely glowing matrix of hexagonal container cells and vertical pipeline beams in electric cyan & emerald.</p>
+        <div class="image-stage">
+          <img src="/images/concepts/earth_digital_shadow_minimal.jpg" alt="Container Honeycomb Grid">
+        </div>
+        <div class="nav-preview">
+          <img src="/images/concepts/earth_digital_shadow_minimal.jpg" alt="Mark">
+          <div class="brand-text">Earth<span>Build</span></div>
+          <span class="nav-hint">Navbar Lockup Preview</span>
+        </div>
+      </div>
+
+      <!-- CONCEPT 4 -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">4. The Cinematic Orbital Hero</div>
+          <span class="card-badge">HERO KEYNOTE ART</span>
+        </div>
+        <p class="card-desc">High-impact photorealistic Earth from orbit. Pristine blue day side; the shadow night side is illuminated by glowing green and cyan fiber-optic city lights, network topography, and atmospheric halo.</p>
+        <div class="image-stage">
+          <img src="/images/concepts/earth_digital_shadow_hero.jpg" alt="Cinematic Hero Globe">
+        </div>
+        <div class="nav-preview">
+          <img src="/images/concepts/earth_digital_shadow_hero.jpg" alt="Mark">
+          <div class="brand-text">Earth<span>Build</span></div>
+          <span class="nav-hint">Navbar Lockup Preview</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

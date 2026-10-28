@@ -1,0 +1,12 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.60, "o", "   \u001b[36m+deps\u001b[0m  | --> Downloading Zig 0.16.0 for aarch64-linux\r\n"]
+[1.50, "o", "   \u001b[36m+deps\u001b[0m  | --> Extracting /zig (toolchain ready)\r\n"]
+[2.20, "o", "   \u001b[36m+src\u001b[0m   | --> COPY build.zig src/ ./\r\n"]
+[3.10, "o", "  \u001b[36m+build\u001b[0m  | --> RUN zig build\r\n"]
+[4.20, "o", "  \u001b[36m+build\u001b[0m  | [1/4] Compiling src/main.zig (LLVM backend)\r\n"]
+[5.30, "o", "  \u001b[36m+build\u001b[0m  | [4/4] Linking binary zig-out/bin/fizzbuzz\r\n"]
+[6.00, "o", "  \u001b[36m+build\u001b[0m  | --> SAVE ARTIFACT zig-out/bin/fizzbuzz AS LOCAL fizzbuzz\r\n"]
+[6.70, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [5.9s] ===========================\u001b[0m\r\n"]

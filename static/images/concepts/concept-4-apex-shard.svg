@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="c4-facet1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="c4-facet2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="c4-facet3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0B1322"/>
+
+  <!-- An ultra-fast, dynamic forward arrow built of 3 counter-folding geometric facets -->
+  <g transform="translate(15, 0)">
+    <!-- Top Wing (Fast Inbound Pipeline) -->
+    <path d="M 120,130 L 370,240 L 260,250 L 170,170 Z" fill="url(#c4-facet1)"/>
+
+    <!-- Bottom Wing (Fast Hermetic Sandbox) -->
+    <path d="M 170,342 L 260,262 L 370,272 L 120,382 Z" fill="url(#c4-facet2)"/>
+
+    <!-- Center Diamond Engine (Cache Hit / Output) -->
+    <path d="M 280,256 L 370,190 L 440,256 L 370,322 Z" fill="url(#c4-facet3)"/>
+  </g>
+</svg>

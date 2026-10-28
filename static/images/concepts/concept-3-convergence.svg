@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="c3-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="c3-mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="c3-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(15, 0)">
+    <!-- Top Inbound Chevron (Cyan) -->
+    <path d="M 90,130 L 190,130 L 290,230 L 230,230 L 140,140 L 90,140 Z" fill="url(#c3-cyan)"/>
+    <!-- Bottom Inbound Chevron (Mint) -->
+    <path d="M 90,382 L 140,382 L 230,282 L 290,282 L 190,382 L 90,382 Z" fill="url(#c3-mint)"/>
+    <!-- Core Delta Spear (Emerald) -->
+    <path d="M 240,256 L 330,166 L 430,256 L 330,346 Z" fill="url(#c3-emerald)"/>
+    <!-- Inner Forward Negative-Space Notch -->
+    <polygon points="290,256 340,206 390,256 340,306" fill="#0B1322"/>
+  </g>
+</svg>

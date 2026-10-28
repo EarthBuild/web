@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer Planetary Ring -->
+  <circle cx="100" cy="100" r="78" stroke="#1E293B" stroke-width="8"/>
+  
+  <!-- Day Side: Solid Oceanic Fill -->
+  <path d="M 100 22 A 78 78 0 0 0 100 178 Z" fill="#0284C7"/>
+  
+  <!-- Night Side: 2 Minimalist Digital Circuit Paths -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 100 65 L 145 65 L 165 85" stroke="#38BDF8" stroke-width="11"/>
+    <circle cx="165" cy="85" r="9" fill="#38BDF8"/>
+    
+    <path d="M 100 135 L 145 135 L 165 115" stroke="#10B981" stroke-width="11"/>
+    <circle cx="165" cy="115" r="9" fill="#10B981"/>
+  </g>
+</svg>

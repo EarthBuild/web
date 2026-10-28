@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="c4-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="c4-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="c4-mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <!-- Three forward-pointing aerodynamic wedges stacked in precision isometric perspective -->
+  <g transform="translate(10, 0)">
+    <!-- Layer 1: Left Wedge (Cyan) -->
+    <path d="M 80,180 L 190,256 L 80,332 L 120,332 L 230,256 L 120,180 Z" fill="url(#c4-cyan)"/>
+    <!-- Layer 2: Mid Wedge (Mint) -->
+    <path d="M 170,150 L 310,256 L 170,362 L 215,362 L 355,256 L 215,150 Z" fill="url(#c4-mint)"/>
+    <!-- Layer 3: Forward Spearhead (Emerald) -->
+    <path d="M 280,120 L 440,256 L 280,392 L 330,392 L 470,256 L 330,120 Z" fill="url(#c4-emerald)"/>
+  </g>
+</svg>

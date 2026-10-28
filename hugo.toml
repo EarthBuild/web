@@ -1,0 +1,63 @@
+baseURL = 'https://earthbuild.dev/'
+defaultContentLanguage = 'en'
+title = 'EarthBuild — Like Docker for Builds'
+description = 'EarthBuild is the open source, container-powered build system. Write once, run anywhere with instant caching and automatic parallelism.'
+
+[languages]
+  [languages.en]
+    locale = 'en-US'
+    label = 'English'
+
+[params]
+  tagline = "It's like Docker for builds"
+  description = "Repeatable, isolated, cached builds that run identically on your laptop and in any CI. The community-supported open-source successor to Earthly."
+  githubRepo = "https://github.com/earthbuild/earthbuild"
+  docsUrl = "https://docs.earthbuild.dev"
+  slackUrl = "https://earthbuild.dev/slack"
+  dockerHubUrl = "https://hub.docker.com/u/earthbuild"
+  license = "Mozilla Public License 2.0"
+  latestVersion = "v0.8.15"
+
+[menu]
+  [[menu.main]]
+    name = "Features"
+    url = "/#features"
+    weight = 10
+  [[menu.main]]
+    name = "Compare"
+    url = "/#comparison"
+    weight = 20
+  [[menu.main]]
+    name = "Examples"
+    url = "/#examples"
+    weight = 30
+  [[menu.main]]
+    name = "Docs"
+    url = "https://docs.earthbuild.dev"
+    weight = 40
+  [[menu.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 50
+  [[menu.main]]
+    name = "Install"
+    url = "/install/"
+    weight = 60
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/css"
+    target = "assets/css"
+  [[module.mounts]]
+    source = "static"
+    target = "static"

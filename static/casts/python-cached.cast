@@ -1,0 +1,11 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +test\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.35, "o", "   \u001b[36m+base\u001b[0m   | \u001b[32m*cached*\u001b[0m --> FROM python:3.12-slim\r\n"]
+[0.45, "o", "   \u001b[36m+deps\u001b[0m   | \u001b[32m*cached*\u001b[0m --> COPY requirements.txt ./\r\n"]
+[0.55, "o", "   \u001b[36m+deps\u001b[0m   | \u001b[32m*cached*\u001b[0m --> RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt\r\n"]
+[0.65, "o", "   \u001b[36m+src\u001b[0m    | \u001b[32m*cached*\u001b[0m --> COPY src/ tests/ ./\r\n"]
+[0.75, "o", "   \u001b[36m+test\u001b[0m   | \u001b[32m*cached*\u001b[0m --> RUN pytest --disable-warnings -v\r\n"]
+[0.85, "o", "   \u001b[36m+test\u001b[0m   | ======================== 42 passed in 0.18s ========================\r\n"]
+[1.00, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [0.9s] ===========================\u001b[0m\r\n"]

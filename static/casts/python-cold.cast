@@ -1,0 +1,13 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.60, "o", "   \u001b[36m+base\u001b[0m   | --> FROM python:3\r\n"]
+[1.00, "o", "   \u001b[36m+base\u001b[0m   | --> WORKDIR /code\r\n"]
+[1.50, "o", "   \u001b[36m+deps\u001b[0m   | --> RUN pip install wheel\r\n"]
+[2.20, "o", "   \u001b[36m+deps\u001b[0m   | --> COPY requirements.txt ./\r\n"]
+[3.00, "o", "   \u001b[36m+deps\u001b[0m   | --> RUN pip wheel -r requirements.txt --wheel-dir=wheels\r\n"]
+[4.20, "o", "   \u001b[36m+deps\u001b[0m   | Downloading markdown-3.10.3-py3-none-any.whl (110 kB)\r\n"]
+[5.00, "o", "  \u001b[36m+build\u001b[0m  | --> COPY src src\r\n"]
+[5.80, "o", "  \u001b[36m+build\u001b[0m  | --> SAVE ARTIFACT src /src, wheels /wheels\r\n"]
+[6.40, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [4.8s] ===========================\u001b[0m\r\n"]

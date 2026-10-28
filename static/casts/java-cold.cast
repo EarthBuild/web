@@ -1,0 +1,11 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.60, "o", "   \u001b[36m+deps\u001b[0m  | --> apk add gradle openjdk21 (844 MiB in 50 packages)\r\n"]
+[1.80, "o", "  \u001b[36m+build\u001b[0m  | --> COPY src src\r\n"]
+[3.50, "o", "  \u001b[36m+build\u001b[0m  | > Task :compileJava\r\n"]
+[4.80, "o", "  \u001b[36m+build\u001b[0m  | > Task :build (BUILD SUCCESSFUL in 3s)\r\n"]
+[5.90, "o", "  \u001b[36m+build\u001b[0m  | > Task :installDist\r\n"]
+[6.70, "o", " \u001b[36m+build\u001b[0m  | --> SAVE ARTIFACT bin bin, lib lib\r\n"]
+[7.40, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [16.8s] ===========================\u001b[0m\r\n"]

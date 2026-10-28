@@ -1,0 +1,12 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.35, "o", "   \u001b[36m+base\u001b[0m   | \u001b[32m*cached*\u001b[0m --> FROM rust:1.80-alpine3.20 (sccache)\r\n"]
+[0.45, "o", "   \u001b[36m+deps\u001b[0m   | \u001b[32m*cached*\u001b[0m --> COPY Cargo.toml Cargo.lock ./\r\n"]
+[0.55, "o", "   \u001b[36m+src\u001b[0m    | \u001b[32m*cached*\u001b[0m --> COPY src/ ./\r\n"]
+[0.70, "o", "  \u001b[36m+build\u001b[0m   | \u001b[32m*cached*\u001b[0m --> RUN --mount=type=cache,target=/root/.cache/sccache cargo build --release\r\n"]
+[0.85, "o", "  \u001b[36m+build\u001b[0m   | sccache: \u001b[32m100% cache hits\u001b[0m (142 compiled crates skipped)\r\n"]
+[0.95, "o", "  \u001b[36m+build\u001b[0m   | \u001b[32m*cached*\u001b[0m --> SAVE ARTIFACT target/release/app AS LOCAL ./bin/rust-app\r\n"]
+[1.30, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [1.3s] ===========================\u001b[0m\r\n"]
+[1.35, "o", "\u001b[90mOutput saved: ./bin/rust-app (6.1 MB) • 32.5x Speedup\u001b[0m\r\n"]

@@ -1,0 +1,77 @@
+<section class="section" id="security" style="background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.07) 0%, transparent 60%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="hero-text-shimmer">Engineered for Zero-Trust Security.</span> <span class="hero-accent-shimmer text-gradient">Built for AI Agents.</span></h2>
+      <p class="section-subtitle">
+        Isolate untrusted open-source packages, protect enterprise credentials, and give autonomous AI coding assistants complete build freedom without risking your host machine.
+      </p>
+    </div>
+
+    <div class="security-grid">
+      <!-- Card 1: Hermetic Host Sandboxing -->
+      <div class="security-card">
+        <div class="security-card-header">
+          <div class="security-icon-box icon-emerald">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <span class="security-badge badge-emerald">Supply Chain Defense</span>
+        </div>
+        <h3>Hermetic Host Sandboxing</h3>
+        <p>
+          Every build step executes inside an unprivileged container namespace. Malicious <code>npm</code>, <code>pip</code>, or <code>cargo</code> post-install scripts can <strong>never access host files, SSH keys, cloud credentials, or environment variables</strong>.
+        </p>
+        <div class="security-card-footer">
+          <span class="security-pill">✓ Zero Host File Access</span>
+          <span class="security-pill">✓ Unprivileged Namespaces</span>
+        </div>
+      </div>
+
+      <!-- Card 2: AI Agent Execution Sandbox -->
+      <div class="security-card security-card-highlight">
+        <div class="security-card-header">
+          <div class="security-icon-box icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="10" rx="2"/>
+              <circle cx="12" cy="5" r="2"/>
+              <path d="M12 7v4"/>
+              <line x1="8" y1="16" x2="8" y2="16"/>
+              <line x1="16" y1="16" x2="16" y2="16"/>
+            </svg>
+          </div>
+          <span class="security-badge badge-cyan">Autonomous AI Ready</span>
+        </div>
+        <h3>The Safe Sandbox for AI Coding Agents</h3>
+        <p>
+          Give autonomous coding agents (Claude Code, Devin, Cursor, Antigravity CLI) full freedom to install dependencies, compile code, and run test suites. If an agent hallucinates a dangerous command, the blast radius is <strong>isolated inside the container sandbox</strong>.
+        </p>
+        <div class="security-card-footer">
+          <span class="security-pill">✓ Safe for Claude Code & Devin</span>
+          <span class="security-pill">✓ Instant Agent Feedback Loops</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Zero-Leak In-Memory Secret Injection -->
+      <div class="security-card">
+        <div class="security-card-header">
+          <div class="security-icon-box icon-amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <span class="security-badge badge-amber">SecOps Compliance</span>
+        </div>
+        <h3>Zero-Leak Secret Injection</h3>
+        <p>
+          Secrets mounted via <code>RUN --secret</code> exist exclusively in RAM during target execution over secure gRPC. They are <strong>never baked into cache layers, exported images, or build logs</strong>.
+        </p>
+        <div class="security-card-footer">
+          <span class="security-pill">✓ In-Memory gRPC Mounts</span>
+          <span class="security-pill">✓ Zero Disk or Cache Leakage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

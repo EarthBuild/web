@@ -1,0 +1,9 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +all-unit-test\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.30, "o", "\u001b[1m─── Resolving monorepo target dependency graph (+all-unit-test)...\u001b[0m\r\n"]
+[0.60, "o", "\u001b[33m─── 🔀 Executing 3 independent targets concurrently\u001b[0m\r\n"]
+[1.20, "o", "  \u001b[36m./libs/hello+unit-test\u001b[0m     | ok  github.com/EarthBuild/examples/go-monorepo/libs/hello 0.12s\r\n"]
+[1.80, "o", "  \u001b[36m./services/one+unit-test\u001b[0m   | ok  github.com/EarthBuild/examples/go-monorepo/services/one 0.34s\r\n"]
+[2.40, "o", "  \u001b[36m./services/two+unit-test\u001b[0m   | ok  github.com/EarthBuild/examples/go-monorepo/services/two 0.28s\r\n"]
+[2.70, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [24.5s] ===========================\u001b[0m\r\n"]

@@ -1,0 +1,10 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.60, "o", "   \u001b[36m+deps\u001b[0m  | --> RUN npm install (added 405 packages in 2s)\r\n"]
+[1.80, "o", "   \u001b[36m+deps\u001b[0m  | --> COPY tsconfig.json src src ./\r\n"]
+[2.80, "o", "  \u001b[36m+build\u001b[0m  | --> RUN npx tsc\r\n"]
+[4.00, "o", "  \u001b[36m+build\u001b[0m  | --> SAVE ARTIFACT dist +build/dist AS LOCAL dist\r\n"]
+[5.10, "o", "  \u001b[36moutput\u001b[0m  | [----------] 100% exporting outputs\r\n"]
+[5.80, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [9.8s] ===========================\u001b[0m\r\n"]

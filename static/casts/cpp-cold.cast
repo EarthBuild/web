@@ -1,0 +1,12 @@
+{"version": 2, "width": 80, "height": 14, "timestamp": 1724580000, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.05, "o", "\u001b[1;36m$ earth +build\u001b[0m\r\n"]
+[0.15, "o", "\u001b[90m─── Init 🚀 Found buildkit daemon as podman container (earth-buildkitd)\u001b[0m\r\n"]
+[0.25, "o", "\u001b[1m─── Build 🔧\u001b[0m\r\n"]
+[0.80, "o", "   \u001b[36m+base\u001b[0m   | --> apt-get update && apt-get install -y build-essential cmake\r\n"]
+[1.60, "o", "   \u001b[36m+code\u001b[0m   | --> COPY src src\r\n"]
+[2.40, "o", "  \u001b[36m+build\u001b[0m   | --> RUN cmake src\r\n"]
+[3.50, "o", "  \u001b[36m+build\u001b[0m   | [1/38] Building CXX object src/CMakeFiles/fibonacci.dir/main.cpp.o\r\n"]
+[4.80, "o", "  \u001b[36m+build\u001b[0m   | [19/38] Building CXX object src/CMakeFiles/fibonacci.dir/calc.cpp.o\r\n"]
+[6.20, "o", "  \u001b[36m+build\u001b[0m   | [38/38] Linking CXX executable fibonacci\r\n"]
+[7.40, "o", "  \u001b[36m+build\u001b[0m   | --> SAVE ARTIFACT fibonacci AS LOCAL fibonacci\r\n"]
+[8.10, "o", "\u001b[1;32m=========================== 🌍 Earth Build  ✅ SUCCESS [30.4s] ===========================\u001b[0m\r\n"]

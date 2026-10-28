@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarthBuild — 20 Logo Wireframe Explorations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070B14;
+      --card-bg: #0C1527;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(56, 189, 248, 0.25);
+      --accent-cyan: #38BDF8;
+      --accent-emerald: #10B981;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      padding: 3rem 1.5rem;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 1200px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .wireframe-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .wireframe-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--card-hover);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    }
+    .card-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    .card-cat {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .artboard {
+      width: 130px;
+      height: 130px;
+      background: #040812;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+      transition: color 0.2s;
+    }
+    .artboard svg {
+      width: 90px;
+      height: 90px;
+    }
+    .wireframe-card:hover .artboard {
+      color: var(--accent-emerald);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.35rem;
+    }
+    .card-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="tag">Structural Identity Phase</div>
+      <h1>20 Wireframe Logo Candidates</h1>
+      <p class="lead">Pure monochrome vector silhouettes. No colors, no gradients, no lighting effects. Choose the structural idea that has the right bones.</p>
+    </header>
+
+    <div class="grid">
+      
+        <div class="wireframe-card" id="wf-01">
+          <div class="card-top">
+            <span class="card-num">01</span>
+            <span class="card-cat">Container & Isolation</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M100 30 L165 68 L165 142 L100 180 L35 142 L35 68 Z"/>
+      <path d="M100 30 L100 105 L165 68"/>
+      <path d="M100 105 L35 68"/>
+      <path d="M100 105 L100 180"/>
+    </svg>
+          </div>
+          <div class="card-title">Structural Wireframe Cube</div>
+          <p class="card-desc">Pure isometric wireframe cube with a reinforced inner central vertex.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-02">
+          <div class="card-top">
+            <span class="card-num">02</span>
+            <span class="card-cat">Container & Isolation</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <path d="M95 32 L160 70 L105 102 L40 64 Z"/>
+      <path d="M35 78 L90 110 L90 174 L35 142 Z"/>
+      <path d="M105 110 L160 78 L160 142 L105 174 Z"/>
+    </svg>
+          </div>
+          <div class="card-title">Deconstructed Hex Shards</div>
+          <p class="card-desc">Three floating isometric facet planes with laser-cut negative-space channels.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-03">
+          <div class="card-top">
+            <span class="card-num">03</span>
+            <span class="card-cat">Container & Isolation</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M100 28 L168 67 L168 145 L100 184 L32 145 L32 67 Z" stroke-width="6"/>
+      <polygon points="100,75 130,92 130,128 100,145 70,128 70,92" fill="currentColor" stroke="none"/>
+    </svg>
+          </div>
+          <div class="card-title">The Build Chamber</div>
+          <p class="card-desc">Outer container chamber sheltering an inner suspended target core.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-04">
+          <div class="card-top">
+            <span class="card-num">04</span>
+            <span class="card-cat">Container & Isolation</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M40 70 L40 40 L70 40"/>
+      <path d="M130 40 L160 40 L160 70"/>
+      <path d="M160 130 L160 160 L130 160"/>
+      <path d="M70 160 L40 160 L40 130"/>
+      <rect x="76" y="76" width="48" height="48" rx="6" fill="currentColor" stroke="none"/>
+    </svg>
+          </div>
+          <div class="card-title">Sandboxed Brackets</div>
+          <p class="card-desc">Four opposing precision corner brackets defining a secure container boundary.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-05">
+          <div class="card-top">
+            <span class="card-num">05</span>
+            <span class="card-cat">Container & Isolation</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Outer Cube -->
+      <path d="M100 25 L170 65 L170 145 L100 185 L30 145 L30 65 Z"/>
+      <!-- Inner Cube -->
+      <path d="M100 65 L140 88 L140 134 L100 157 L60 134 L60 88 Z" stroke-width="6"/>
+      <path d="M100 65 L100 111 L140 88"/>
+      <path d="M100 111 L60 88"/>
+      <path d="M100 111 L100 157"/>
+    </svg>
+          </div>
+          <div class="card-title">Nested Container Parity</div>
+          <p class="card-desc">Dual concentric isometric cubes representing the host environment and container runtime.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-06">
+          <div class="card-top">
+            <span class="card-num">06</span>
+            <span class="card-cat">DAG & Pipeline</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="50" cy="65" r="18" stroke-width="6"/>
+      <circle cx="50" cy="135" r="18" stroke-width="6"/>
+      <circle cx="150" cy="100" r="22" stroke-width="6" fill="currentColor"/>
+      <path d="M68 65 L128 92" stroke-width="6"/>
+      <path d="M68 135 L128 108" stroke-width="6"/>
+    </svg>
+          </div>
+          <div class="card-title">Tri-Node Directed Graph</div>
+          <p class="card-desc">Classic Directed Acyclic Graph: two concurrent input nodes resolving into an apex target.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-07">
+          <div class="card-top">
+            <span class="card-num">07</span>
+            <span class="card-cat">DAG & Pipeline</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <polygon points="40,55 120,95 100,105 40,75"/>
+      <polygon points="40,145 120,105 100,95 40,125"/>
+      <polygon points="80,100 170,100 130,70 110,80"/>
+      <polygon points="80,100 170,100 130,130 110,120"/>
+    </svg>
+          </div>
+          <div class="card-title">The Delta Convergence</div>
+          <p class="card-desc">Three parallel pipeline beams converging into an aerodynamic forward arrow.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-08">
+          <div class="card-top">
+            <span class="card-num">08</span>
+            <span class="card-cat">DAG & Pipeline</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="30" y1="100" x2="60" y2="100"/>
+      <path d="M60 100 L95 55 L135 55 L170 100"/>
+      <path d="M60 100 L95 145 L135 145 L170 100"/>
+      <line x1="170" y1="100" x2="190" y2="100"/>
+      <circle cx="95" cy="55" r="7" fill="currentColor"/>
+      <circle cx="135" cy="55" r="7" fill="currentColor"/>
+      <circle cx="95" cy="145" r="7" fill="currentColor"/>
+      <circle cx="135" cy="145" r="7" fill="currentColor"/>
+    </svg>
+          </div>
+          <div class="card-title">Graph Split & Join</div>
+          <p class="card-desc">Pipeline splits into parallel paths, executes concurrently, then joins at build completion.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-09">
+          <div class="card-top">
+            <span class="card-num">09</span>
+            <span class="card-cat">DAG & Pipeline</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M45 55 L90 100 L45 145"/>
+      <path d="M85 55 L130 100 L85 145"/>
+      <path d="M125 55 L170 100 L125 145"/>
+    </svg>
+          </div>
+          <div class="card-title">Triple Speed Chevrons</div>
+          <p class="card-desc">Layered forward-moving chevrons symbolizing sub-second incremental builds.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-10">
+          <div class="card-top">
+            <span class="card-num">10</span>
+            <span class="card-cat">DAG & Pipeline</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="100,35 165,100 100,165 35,100"/>
+      <line x1="35" y1="100" x2="165" y2="100"/>
+      <line x1="100" y1="35" x2="100" y2="165"/>
+      <circle cx="100" cy="100" r="14" fill="currentColor"/>
+    </svg>
+          </div>
+          <div class="card-title">Concurrency Lattice</div>
+          <p class="card-desc">Diamond lattice nodes executing across all CPU cores simultaneously.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-11">
+          <div class="card-top">
+            <span class="card-num">11</span>
+            <span class="card-cat">Earth & Planetary</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <path d="M45 45 L155 45 L155 155 L45 155 Z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M30 145 Q 100 60 170 145" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+          </div>
+          <div class="card-title">Planetary Horizon Block</div>
+          <p class="card-desc">A bold minimalist cube bisected by an expansive planetary horizon curve.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-12">
+          <div class="card-top">
+            <span class="card-num">12</span>
+            <span class="card-cat">Earth & Planetary</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="100" cy="100" rx="75" ry="32" stroke-width="6" transform="rotate(-25 100 100)"/>
+      <path d="M100 55 L135 75 L135 115 L100 135 L65 115 L65 75 Z" stroke-width="6" fill="#0B1322"/>
+      <path d="M100 55 L100 95 L135 75" stroke-width="5"/>
+      <path d="M100 95 L65 75" stroke-width="5"/>
+      <path d="M100 95 L100 135" stroke-width="5"/>
+    </svg>
+          </div>
+          <div class="card-title">The Orbital Container</div>
+          <p class="card-desc">Isometric container encircled by a high-velocity planetary orbit loop.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-13">
+          <div class="card-top">
+            <span class="card-num">13</span>
+            <span class="card-cat">Earth & Planetary</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="100,30 165,68 165,142 100,180 35,142 35,68" stroke-width="7"/>
+      <ellipse cx="100" cy="105" rx="55" ry="25"/>
+      <ellipse cx="100" cy="105" rx="30" ry="60"/>
+      <line x1="100" y1="30" x2="100" y2="180"/>
+    </svg>
+          </div>
+          <div class="card-title">Geodesic Meridian Hex</div>
+          <p class="card-desc">Hexagonal container mapped with internal geodesic planetary meridians.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-14">
+          <div class="card-top">
+            <span class="card-num">14</span>
+            <span class="card-cat">Earth & Planetary</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <path fill-rule="evenodd" d="M100 25 A 75 75 0 1 0 100 175 A 75 75 0 1 0 100 25 Z M95 65 L145 100 L95 135 Z"/>
+    </svg>
+          </div>
+          <div class="card-title">The Eclipse Aperture</div>
+          <p class="card-desc">Bold circle with an offset precision negative-space triangular cut.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-15">
+          <div class="card-top">
+            <span class="card-num">15</span>
+            <span class="card-cat">Earth & Planetary</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <polygon points="40,40 130,40 100,90 30,80"/>
+      <polygon points="140,45 170,90 125,145 105,95"/>
+      <polygon points="35,95 95,105 115,155 45,155"/>
+    </svg>
+          </div>
+          <div class="card-title">Tectonic Plates</div>
+          <p class="card-desc">Three shifting geometric tectonic plates forming a dynamic hexagonal earth.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-16">
+          <div class="card-top">
+            <span class="card-num">16</span>
+            <span class="card-cat">Monograms & Typographic</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <rect x="40" y="40" width="22" height="120" rx="3"/>
+      <polygon points="62,40 160,40 145,62 62,62"/>
+      <polygon points="62,89 135,89 120,111 62,111"/>
+      <polygon points="62,138 160,138 145,160 62,160"/>
+    </svg>
+          </div>
+          <div class="card-title">Cantilevered Tier 'E'</div>
+          <p class="card-desc">Three stacked architectural container tiers forming a geometric 'E'.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-17">
+          <div class="card-top">
+            <span class="card-num">17</span>
+            <span class="card-cat">Monograms & Typographic</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M45 75 L75 45 L125 45 L155 75 L155 125 L125 155 L75 155 L45 125 Z"/>
+      <line x1="75" y1="45" x2="125" y2="155"/>
+    </svg>
+          </div>
+          <div class="card-title">Parity Infinity Loop</div>
+          <p class="card-desc">Angular ribbon loop signifying guaranteed parity between local machines and CI runners.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-18">
+          <div class="card-top">
+            <span class="card-num">18</span>
+            <span class="card-cat">Monograms & Typographic</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="100,30 165,68 165,142 100,180 35,142 35,68"/>
+      <!-- E on Left -->
+      <path d="M85 70 L55 88 L55 130 L85 112"/>
+      <line x1="55" y1="108" x2="75" y2="98"/>
+      <!-- B on Right -->
+      <path d="M115 70 L145 88 L145 130 L115 112"/>
+      <line x1="115" y1="70" x2="115" y2="150"/>
+      <line x1="115" y1="110" x2="145" y2="110"/>
+    </svg>
+          </div>
+          <div class="card-title">Hexagonal 'EB' Monogram</div>
+          <p class="card-desc">Isometric cube where the left facet shapes an 'E' and the right facet shapes a 'B'.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-19">
+          <div class="card-top">
+            <span class="card-num">19</span>
+            <span class="card-cat">Monograms & Typographic</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <polygon points="100,35 145,60 100,85 55,60"/>
+      <polygon points="100,80 165,115 100,150 35,115"/>
+      <polygon points="100,125 185,165 100,205 15,165" opacity="0.6"/>
+    </svg>
+          </div>
+          <div class="card-title">Stepped Build Plinth</div>
+          <p class="card-desc">Hermetic step-block foundation, communicating rock-solid reliability and structure.</p>
+        </div>
+      
+        <div class="wireframe-card" id="wf-20">
+          <div class="card-top">
+            <span class="card-num">20</span>
+            <span class="card-cat">Monograms & Typographic</span>
+          </div>
+          <div class="artboard">
+            <svg viewBox="0 0 200 200" fill="currentColor">
+      <polygon points="40,50 170,100 40,150 65,100"/>
+      <line x1="75" y1="80" x2="135" y2="100" stroke="#0B1322" stroke-width="6"/>
+      <line x1="75" y1="120" x2="135" y2="100" stroke="#0B1322" stroke-width="6"/>
+    </svg>
+          </div>
+          <div class="card-title">The Kinetic Arrowhead</div>
+          <p class="card-desc">Sharp forward delta sliced by parallel negative-space velocity channels.</p>
+        </div>
+      
+    </div>
+  </div>
+</body>
+</html>
