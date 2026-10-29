@@ -5,6 +5,7 @@
     "helpers:pinGitHubActionDigests",
     "security:openssf-scorecard",
     ":semanticCommits",
+    ":pinVersions",
   ],
   configMigration: true,
   prHourlyLimit: 0,
