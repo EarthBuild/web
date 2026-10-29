@@ -52,7 +52,12 @@ function scheduleDigitalEarth(): void {
     return;
   }
 
-  startEarth();
+  const events = ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown'];
+  const onInteract = () => {
+    events.forEach((e) => window.removeEventListener(e, onInteract));
+    startEarth();
+  };
+  events.forEach((e) => window.addEventListener(e, onInteract, { once: true, passive: true }));
 }
 
 function runInit(): void {

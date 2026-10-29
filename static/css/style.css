@@ -98,10 +98,12 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 10% 40%, rgba(6, 182, 212, 0.04) 0%, transparent 40%),
-              radial-gradient(circle at 90% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
-              var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
+                    radial-gradient(circle at 10% 40%, rgba(6, 182, 212, 0.04) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
 }
 
 /* Background grid effect */
