@@ -21,7 +21,6 @@ export function initCodeExplorer(raceEngine: TripleExecutionRaceEngine): void {
 
     window.addEventListener('scroll', updateStuck, { passive: true });
     window.addEventListener('resize', updateStuck, { passive: true });
-    updateStuck();
   }
 
   // Deck Elements (CodeRabbit-style horizontal cards)

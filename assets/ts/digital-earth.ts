@@ -520,15 +520,14 @@ export async function initDigitalEarth(): Promise<void> {
   const position = new THREE.Vector3();
 
   // Populate Cubic Voxel Blocks
-  for (let i = 0; i < surfaceVoxels.length; i++) {
-    const v = surfaceVoxels[i];
+  surfaceVoxels.forEach((v, i) => {
     position.set(v.x, v.y, v.z);
     matrix.setPosition(position);
     voxelMesh.setMatrixAt(i, matrix);
 
     color.setHex(v.color);
     voxelMesh.setColorAt(i, color);
-  }
+  });
 
   voxelMesh.instanceMatrix.needsUpdate = true;
   if (voxelMesh.instanceColor) voxelMesh.instanceColor.needsUpdate = true;
