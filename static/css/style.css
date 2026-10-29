@@ -188,12 +188,14 @@ pre {
     #F8FAFC 80%,
     #FFFFFF 100%
   );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   max-width: 100%;
   vertical-align: top;
+  animation: textShimmer 8s linear infinite;
 }
 
 .hero-accent-shimmer,
@@ -208,12 +210,23 @@ pre {
     #22D3EE 76%,
     #34D399 100%
   );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   max-width: 100%;
   vertical-align: top;
+  animation: textShimmer 6s linear infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .text-gradient-emerald {
