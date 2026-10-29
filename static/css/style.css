@@ -212,7 +212,6 @@ pre {
   display: inline-block;
   max-width: 100%;
   vertical-align: top;
-  filter: drop-shadow(0 0 18px rgba(52, 211, 153, 0.4));
 }
 
 .text-gradient-emerald {
@@ -468,13 +467,13 @@ pre {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  filter: drop-shadow(0 0 50px rgba(56, 189, 248, 0.15));
   transition: opacity 0.8s ease-out;
 }
 
 .digital-earth-canvas.loaded {
   opacity: 0.94;
   visibility: visible;
+  filter: drop-shadow(0 0 50px rgba(56, 189, 248, 0.15));
 }
 
 .hero-container-content {
@@ -551,8 +550,6 @@ pre {
   line-height: 1.18;
   letter-spacing: -0.03em;
   margin-bottom: 2rem;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95))
-          drop-shadow(0 6px 20px rgba(6, 10, 19, 0.9));
 }
 
 .hero-subtitle {
@@ -1709,8 +1706,6 @@ pre {
 }
 
 .cr-feature-card[data-active="false"] .cr-card-window-content {
-  opacity: 0.55;
-  filter: saturate(0.75);
   pointer-events: none;
 }
 

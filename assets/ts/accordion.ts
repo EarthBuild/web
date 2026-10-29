@@ -14,6 +14,10 @@ export function initCodeExplorer(raceEngine: TripleExecutionRaceEngine): void {
 
   if (sentinel && langNavbar) {
     const updateStuck = () => {
+      if (window.scrollY === 0) {
+        langNavbar.classList.remove('is-stuck');
+        return;
+      }
       const rect = sentinel.getBoundingClientRect();
       const isStuck = rect.top <= 20;
       langNavbar.classList.toggle('is-stuck', isStuck);
@@ -21,7 +25,9 @@ export function initCodeExplorer(raceEngine: TripleExecutionRaceEngine): void {
 
     window.addEventListener('scroll', updateStuck, { passive: true });
     window.addEventListener('resize', updateStuck, { passive: true });
-    updateStuck();
+    if (window.scrollY > 0) {
+      requestAnimationFrame(updateStuck);
+    }
   }
 
   // Deck Elements (CodeRabbit-style horizontal cards)

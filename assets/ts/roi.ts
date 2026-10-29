@@ -89,9 +89,9 @@ export function initRoiCalculator(): void {
     const builds = parseInt(buildsPerDayInput?.value || '8', 10);
     const minsSaved = parseInt(minutesSavedInput?.value || '12', 10);
 
-    if (teamSizeVal) teamSizeVal.innerText = `${team} devs`;
-    if (buildsPerDayVal) buildsPerDayVal.innerText = `${builds} builds/day`;
-    if (minutesSavedVal) minutesSavedVal.innerText = `${minsSaved} mins`;
+    if (teamSizeVal) teamSizeVal.textContent = `${team} devs`;
+    if (buildsPerDayVal) buildsPerDayVal.textContent = `${builds} builds/day`;
+    if (minutesSavedVal) minutesSavedVal.textContent = `${minsSaved} mins`;
 
     // Monthly math: 21 working days per month
     const totalBuildsPerMonth = team * builds * 21;
@@ -108,29 +108,29 @@ export function initRoiCalculator(): void {
     const totalKwh = Math.round(totalKgCo2 * 2); // ~1 kWh per 500g CO2e
 
     if (hoursSavedResult) {
-      hoursSavedResult.innerText = `${totalHoursSaved.toLocaleString()} hrs`;
+      hoursSavedResult.textContent = `${totalHoursSaved.toLocaleString()} hrs`;
     }
     if (hoursPerDevResult) {
-      hoursPerDevResult.innerText = `≈ ~${hoursPerDev.toLocaleString()} hrs saved / dev / month`;
+      hoursPerDevResult.textContent = `≈ ~${hoursPerDev.toLocaleString()} hrs saved / dev / month`;
     }
     if (runnerMinutesResult) {
-      runnerMinutesResult.innerText = `${totalMinutesSaved.toLocaleString()} mins`;
+      runnerMinutesResult.textContent = `${totalMinutesSaved.toLocaleString()} mins`;
     }
     if (vcpuHoursResult) {
-      vcpuHoursResult.innerText = `≈ ${vcpuHours.toLocaleString()} vCPU-hrs (2-vCPU runner baseline)`;
+      vcpuHoursResult.textContent = `≈ ${vcpuHours.toLocaleString()} vCPU-hrs (2-vCPU runner baseline)`;
     }
     if (co2SavedResult) {
       if (totalKgCo2 >= 1000) {
-        co2SavedResult.innerText = `${(totalKgCo2 / 1000).toFixed(1)} t CO₂e`;
+        co2SavedResult.textContent = `${(totalKgCo2 / 1000).toFixed(1)} t CO₂e`;
       } else {
-        co2SavedResult.innerText = `${totalKgCo2.toLocaleString()} kg CO₂e`;
+        co2SavedResult.textContent = `${totalKgCo2.toLocaleString()} kg CO₂e`;
       }
     }
     if (co2EquivalentResult) {
       if (totalKwh >= 1000) {
-        co2EquivalentResult.innerText = `≈ ~${(totalKwh / 1000).toFixed(1)} MWh data center energy spared`;
+        co2EquivalentResult.textContent = `≈ ~${(totalKwh / 1000).toFixed(1)} MWh data center energy spared`;
       } else {
-        co2EquivalentResult.innerText = `≈ ~${totalKwh.toLocaleString()} kWh data center energy spared`;
+        co2EquivalentResult.textContent = `≈ ~${totalKwh.toLocaleString()} kWh data center energy spared`;
       }
     }
 
