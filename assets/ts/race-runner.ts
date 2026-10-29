@@ -150,7 +150,6 @@ export class TripleExecutionRaceEngine {
 
     const appendLines = (
       linesEl: HTMLElement | null,
-      screenEl: HTMLElement | null,
       lines: Array<{ text: string; class?: string }>,
     ) => {
       if (!linesEl) return;
@@ -162,14 +161,11 @@ export class TripleExecutionRaceEngine {
         frag.appendChild(line);
       });
       linesEl.appendChild(frag);
-      if (screenEl) {
-        screenEl.scrollTop = screenEl.scrollHeight;
-      }
     };
 
-    appendLines(this.coldLinesEl, this.coldScreenEl, sample.cold);
-    appendLines(this.editLinesEl, this.editScreenEl, sample.edit);
-    appendLines(this.cachedLinesEl, this.cachedScreenEl, sample.cached);
+    appendLines(this.coldLinesEl, sample.cold);
+    appendLines(this.editLinesEl, sample.edit);
+    appendLines(this.cachedLinesEl, sample.cached);
 
     if (this.coldWindow) this.coldWindow.classList.add('cold-pulse');
     if (this.editWindow) this.editWindow.classList.add('edit-pulse');

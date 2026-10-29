@@ -42,19 +42,25 @@
   }
   </script>
 
-  <!-- Google Fonts Optimization: Preconnect & Non-blocking Async Loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts Optimization: On-Interaction Optional Loading (Zero CLS / Zero TBT) -->
   <script>
-    window.addEventListener('load', function() {
-      var l = document.createElement('link');
-      l.rel = 'stylesheet';
-      l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap';
-      document.head.appendChild(l);
-    });
+    (() => {
+      const events = ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown'];
+      let loaded = false;
+      function loadFonts() {
+        if (loaded) return;
+        loaded = true;
+        events.forEach((e) => window.removeEventListener(e, loadFonts));
+        const l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=optional';
+        document.head.appendChild(l);
+      }
+      events.forEach((e) => window.addEventListener(e, loadFonts, { once: true, passive: true }));
+    })();
   </script>
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=optional">
   </noscript>
 
   <!-- Zero-Render-Blocking Critical CSS Inlined via Hugo Pipes for Sub-2s FCP -->
@@ -72,12 +78,9 @@
 
   {{ partial "footer.html" . }}
 
-  <!-- Interactive TypeScript (Compiled via Hugo Pipes / ESBuild) -->
-  {{ $opts := dict "targetPath" "js/bundle.js" "minify" hugo.IsProduction }}
+  <!-- Interactive TypeScript (Inlined via Hugo Pipes / ESBuild for Single-Pass Initial Layout) -->
+  {{ $opts := dict "targetPath" "js/bundle.js" "minify" true }}
   {{ $js := resources.Get "ts/main.ts" | js.Build $opts }}
-  {{ if hugo.IsProduction }}
-    {{ $js = $js | fingerprint }}
-  {{ end }}
-  <script src="{{ $js.RelPermalink }}" defer></script>
+  <script>{{ $js.Content | safeJS }}</script>
 </body>
 </html>
