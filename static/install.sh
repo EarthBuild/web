@@ -127,13 +127,13 @@ extract_expected_hash() {
             gsub("\r", "")
 
             # GNU format: <hash>  <filename> OR <hash> *<filename>
-            if ($1 ~ /^[A-Fa-f0-9]{64}$/ && ($2 == target_file || $2 == "*" target_file)) {
+            if (length($1) == 64 && $1 ~ /^[A-Fa-f0-9]+$/ && ($2 == target_file || $2 == "*" target_file)) {
                 print tolower($1)
                 exit
             }
 
             # BSD format: SHA256 (<filename>) = <hash>
-            if ($1 == "SHA256" && $2 == "(" target_file ")" && $3 == "=" && $4 ~ /^[A-Fa-f0-9]{64}$/) {
+            if ($1 == "SHA256" && $2 == "(" target_file ")" && $3 == "=" && length($4) == 64 && $4 ~ /^[A-Fa-f0-9]+$/) {
                 print tolower($4)
                 exit
             }
@@ -208,14 +208,21 @@ install_binary() {
         fi
     fi
 
+    # Stage in INSTALL_DIR first so mv performs an atomic same-filesystem rename
+    # instead of an in-place cross-device write (which can fail if earth is running).
+    STAGED_FILE="$INSTALL_DIR/.${BINARY_NAME}.tmp.$$"
     if [ -w "$INSTALL_DIR" ]; then
-        mv "$TMP_FILE" "$INSTALL_DIR/$BINARY_NAME"
+        cp "$TMP_FILE" "$STAGED_FILE"
+        chmod +x "$STAGED_FILE"
+        mv -f "$STAGED_FILE" "$INSTALL_DIR/$BINARY_NAME"
     else
         if ! command -v sudo >/dev/null 2>&1; then
             error "No write permission for $INSTALL_DIR and sudo is not available."
         fi
         log "Requesting sudo access to install to $INSTALL_DIR..."
-        sudo mv "$TMP_FILE" "$INSTALL_DIR/$BINARY_NAME"
+        sudo cp "$TMP_FILE" "$STAGED_FILE"
+        sudo chmod +x "$STAGED_FILE"
+        sudo mv -f "$STAGED_FILE" "$INSTALL_DIR/$BINARY_NAME"
     fi
     chmod +x "$INSTALL_DIR/$BINARY_NAME" 2>/dev/null || sudo chmod +x "$INSTALL_DIR/$BINARY_NAME"
 
@@ -229,7 +236,9 @@ verify_installation() {
         error "Installation failed. $INSTALL_DIR/$BINARY_NAME is not executable."
     fi
 
-    INSTALLED_VERSION=$("$INSTALL_DIR/$BINARY_NAME" --version 2>/dev/null || echo "unknown")
+    if ! INSTALLED_VERSION=$("$INSTALL_DIR/$BINARY_NAME" --version 2>/dev/null); then
+        error "Installation failed. $INSTALL_DIR/$BINARY_NAME --version failed to execute."
+    fi
     log "Installed: $INSTALLED_VERSION"
 
     if ! command -v "$BINARY_NAME" >/dev/null 2>&1; then
