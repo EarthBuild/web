@@ -42,6 +42,50 @@ describe('Install Tabs & Mobile Navigation E2E', () => {
     await page.close();
   });
 
+  it('serves /install.sh referenced in install snippets for download', async () => {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 900 });
+    await page.goto(`${server.baseUrl}/`, { waitUntil: 'networkidle0' });
+
+    const curlTab = await page.$('.install-tab-btn[data-install-type="curl"]');
+    assert.ok(curlTab, 'Curl tab should exist');
+    await curlTab.click();
+
+    const curlCode = await page.$eval('#installCodeSnippet', (el) => el.textContent.trim());
+    const urlMatch = curlCode.match(/https:\/\/www\.earthbuild\.dev(\/\S+)/);
+    assert.ok(urlMatch, `Expected earthbuild.dev URL in curl snippet, got: ${curlCode}`);
+
+    const scriptPath = urlMatch[1];
+    assert.equal(scriptPath, '/install.sh');
+
+    const result = await page.evaluate(async (path) => {
+      const res = await fetch(path);
+      const body = await res.text();
+      return {
+        status: res.status,
+        ok: res.ok,
+        body,
+      };
+    }, scriptPath);
+
+    assert.equal(result.status, 200, 'Expected HTTP 200 when downloading /install.sh');
+    assert.ok(result.ok, 'Response should be ok');
+    assert.ok(
+      result.body.startsWith('#!/bin/sh\n'),
+      'Downloaded install.sh should start with #!/bin/sh shebang',
+    );
+    assert.ok(
+      result.body.includes('GITHUB_REPO="EarthBuild/earthbuild"'),
+      'Downloaded install.sh should reference EarthBuild/earthbuild repository',
+    );
+    assert.ok(
+      result.body.includes('BINARY_NAME="earth"'),
+      'Downloaded install.sh should install the earth binary',
+    );
+
+    await page.close();
+  });
+
   it('toggles mobile navigation drawer on compact viewport', async () => {
     const page = await browser.newPage();
     await page.setViewport({ width: 390, height: 844 });
